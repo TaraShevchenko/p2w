@@ -1,0 +1,176 @@
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  outline: 0;
+
+  font-weight: inherit;
+
+  font-style: inherit;
+
+  font-size: 100%;
+
+  font-family: inherit;
+
+  vertical-align: baseline;
+
+}
+
+:focus {
+
+  outline: 0;
+
+}
+
+body {
+
+  line-height: 1;
+
+  color: black;
+
+  background: white;
+
+}
+
+ol, ul {
+
+  list-style: none;
+
+}
+
+table {
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+}
+
+caption, th, td {
+
+  text-align: left;
+
+  font-weight: normal;
+
+}
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+
+  content: "";
+
+}
+
+blockquote, q {
+
+  quotes: "" "";
+
+}
+
+
+button{
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  &:hover{
+    transition: 0.3s;
+  }
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+  color: inherit;
+}
+
+a:hover{
+  transition: 0.3s;
+}
+
+button:focus, a:focus, img:focus, li:focus, input:focus {
+  outline: none;
+}
+
+button{
+  appearance: none;
+}
+
+input::-webkit-input-placeholder{
+  opacity: 1;
+}
+
+input::-moz-placeholder{
+  opacity: 1;
+}
+
+input:-moz-placeholder{
+  opacity: 1;
+}
+
+input:-ms-input-placeholder{
+  opacity: 1;
+}
+
+
+textarea::-webkit-input-placeholder{
+  opacity: 1;
+}
+
+textarea::-moz-placeholder{
+  opacity: 1;
+}
+
+textarea:-moz-placeholder{
+  opacity: 1;
+}
+
+textarea:-ms-input-placeholder{
+  opacity: 1;
+}
+
+input,
+select,
+option,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+  box-shadow: none;
+}

@@ -1,0 +1,288 @@
+.container.profile__container.profile__container--tournaments {
+  .profile__socials {
+    margin-bottom: 33px;
+  }
+
+  .about-list__item {
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .about-list__item-key {
+    margin-bottom: 10px;
+  }
+
+  .profile__currency-value {
+    margin-left: 8px;
+
+    &.green {
+      color: #10AA1B;
+    }
+
+    &.red {
+      color: #F12619;
+    }
+  }
+
+  .info-center__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-center__member {
+    width: 25px;
+    height: 25px;
+    display: block;
+  }
+
+  .info-center__currency-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .info-center__currency {
+    margin-left: 7px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .statistic-button__image.statistic-button__image--member {
+    width: 18px;
+    height: auto;
+    margin-right: 3px;
+    margin-left: -4px;
+  }
+}
+
+.member-item__switcher {
+  color: #fff;
+  position: relative;
+  font: 400 16px/1 'gilroy';
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+
+    &:after {
+      content: '';
+    }
+  }
+
+  &:after {
+    content: '/';
+    position: absolute;
+    left: calc(100% + 3px);
+  }
+}
+
+.statistic-item__tournaments-cup-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statistic-item__tournaments-cup {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.primary__button.button--info-left-tournaments {
+  max-width: 210px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tournaments-info {
+  padding: 39px 0 80px;
+
+  .block--divider {
+    margin: 47px 0 34px;
+  }
+}
+
+.tournaments-info__title {
+  color: #fff;
+  font: 600 20px/1 'gilroy';
+
+  margin-bottom: 38px;
+}
+
+.tournaments-info__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.tournaments-info__text-left, .tournaments-info__text-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 45%;
+}
+
+.tournaments-info__text {
+  color: #fff;
+  font: 400 16px/19px 'gilroy';
+}
+
+.tournaments-info__text-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+
+.tournaments-info__text-link {
+  color: #701ED9;
+}
+
+.tournaments-teams {
+  padding: 49px 0 61px;
+}
+
+.table--tournaments-teams {
+  .table__header, .body__row {
+    grid-template-columns: 1.2fr .8fr 1fr .8fr .8fr 1fr 1fr .3fr;
+  }
+
+  .row__col {
+    display: flex;
+    align-items: center;
+  }
+
+  .team-col__image-wrapper {
+    position: relative;
+    display: block;
+    margin-right: 15px;
+  }
+
+  .team-col__image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .ranked--green {
+    .ranked__icon {
+      background: #22B21F;
+      transform: rotate(270deg);
+    }
+
+    .ranked__text {
+      color: #22B21F;
+    }
+  }
+
+  .ranked--red {
+    .ranked__icon {
+      background: #FF0000;
+      transform: rotate(90deg);
+    }
+
+    .ranked__text {
+      color: #FF0000;
+    }
+  }
+
+  .ranked__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 12px;
+    width: 12px;
+    margin: 0 5px 0 8px;
+    border-radius: 100%;
+  }
+
+  .win-rate__icon {
+    position: relative;
+    width: 29px;
+    height: 29px;
+    margin-right: 11px;
+
+    svg {
+      width: 29px;
+      height: 29px;
+    }
+  }
+
+  .win-rate__icon-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    circle {
+      stroke: #E89930;
+      stroke-linecap: round;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .win-rate__icon-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+    circle {
+      stroke: #651BC3;
+      stroke-linecap: round;
+      stroke-dasharray: 125 150;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .row__col-currency {
+    width: 12px;
+    height: 12px;
+    margin-left: 9px;
+  }
+}
+
+.maps-list {
+  padding: 49px 0 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.maps-list__item {
+  display: flex;
+  flex-direction: column;
+  font: 700 16px/1 'gilroy';
+  color: #fff;
+
+  img {
+    height: auto;
+    width: 260px;
+    margin-bottom: 22px;
+  }
+}
+
+.specification {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding: 50px 0 80px;
+}
+
+.specification__item {
+  display: flex;
+  gap: 22px;
+  font: 400 16px/1 'gilroy';
+  color: #fff;
+}
+
+.specification__item-number {
+  font-weight: 700;
+}
+
+.tournaments-match {
+  padding: 49px 0 37px;
+}

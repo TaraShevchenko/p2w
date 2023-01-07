@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 -51.89%, #1E0040 82.5%, #1E0040 85.88%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1222px;
+  padding: 0 16px;
+  width: 100%;
+  margin: 0 auto;
+  @media only screen and (max-width: 1200px) {
+    max-width: 992px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 24px;
+  }
+}
+
+.ellipse-icon.green {
+  color: #22B21F;
+}
+
+.ellipse-icon.red {
+  color: #F12619;
+}
+
+.tooltip__wrapper {
+  position: relative;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      pointer-events: unset;
+      transition: all .3s ease;
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  min-width: 270px;
+  min-height: 85px;
+  height: fit-content;
+  width: fit-content;
+  background-image: url('../images/TooltipBackground.png');
+  background-size: calc(100% + 10px) calc(100% + 42px);
+  background-position: 10px -21px;
+  background-repeat: no-repeat;
+  padding: 15px 23px 15px 63px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+
+  cursor: default;
+}
+
+.central-block__top-border, .central-block__bottom-border {
+  width: 100%;
+}
+
+.primary__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  border-radius: 5px;
+  background: #8424FE;
+  font: 400 16px/1 'gilroy';
+
+  height: 40px;
+  padding: 0 33px;
+}
+
+.primary__button-icon {
+  margin-right: 14px;
+}
