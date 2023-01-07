@@ -1,0 +1,696 @@
+.container.profile__container {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile__info-left, .profile__info-center, .profile__info-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.profile__info-left {
+  justify-content: space-between;
+}
+
+.profile__info-center {
+  align-items: center;
+}
+
+.profile__info-right {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.profile__socials {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 15px;
+}
+
+.profile__steam, .profile__id {
+  display: flex;
+  align-items: center;
+  color: #AAA5A5;
+  font: 400 16px/1 'gilroy';
+  margin-bottom: 18px;
+}
+
+.profile__steam-image, .profile__id-image {
+  margin-right: 15px;
+}
+
+.profile__steam-arrow {
+  position: relative;
+  color: #fff;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.steam__tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.steam__tooltip-item {
+  display: flex;
+  gap: 8px;
+  font: 400 12px/1 'gilroy';
+}
+
+.steam__tooltip-item-key {
+  font-weight: 700;
+}
+
+.steam__tooltip-item-copy {
+  cursor: pointer;
+}
+
+.profile__about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+}
+
+.about-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.about-list__item-key {
+  font: 700 16px/1 'gilroy';
+  min-width: 75px;
+  margin-right: 10px;
+}
+
+.about-list__item-value {
+  font: 400 16px/1 'gilroy';
+}
+
+.about-list__item-image {
+  margin-left: 10px;
+}
+
+.profile__container {
+  .profile__avatar-wrapper {
+    margin-top: 2px;
+    margin-bottom: 19px;
+    margin-right: unset;
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile__avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.info-center__block {
+  display: flex;
+  gap: 11px;
+  color: #fff;
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.info-center__block-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+}
+
+.info-center__vip-img {
+  width: 18px;
+  height: auto;
+}
+
+.info-center__copy-img {
+  width: 16px;
+  height: auto;
+}
+
+.info-center__block-key {
+  font: 700 16px/1 'gilroy';
+
+  &.green {
+    color: #10AA1B;
+  }
+
+  &.red {
+    color: #F12619;
+  }
+}
+
+.info-center__block-text {
+  font: 400 16px/1 'gilroy';
+}
+
+.profile__container {
+  .profile__currency {
+    justify-content: flex-end;
+  }
+}
+
+.profile__settings {
+  margin-top: 28px;
+}
+
+.profile__settings-button {
+  display: flex;
+  align-items: center;
+  color: #9A9A9A;
+  font: 400 16px/1 'gilroy';
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.settings-button__image {
+  margin-right: 8px;
+}
+
+.profile__statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 225px;
+}
+
+.profile__statistic-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.statistic-button__image {
+  color: #8223FA;
+  margin-right: 10px;
+}
+
+.statistic-item__key {
+  font: 700 16px/1 'gilroy';
+  flex: 1 1 0;
+}
+
+.statistic-item__value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font: 400 16px/1 'gilroy';
+  flex: 1 1 0;
+}
+
+.statistic-item__switcher {
+  color: #9A9A9A;
+  display: block;
+  position: relative;
+  font: 400 16px/1 'gilroy';
+
+  margin-right: 14px;
+
+  &.active {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    &:after {
+      content: '';
+    }
+  }
+
+  &:after {
+    content: '/';
+    position: absolute;
+    left: calc(100% + 3px);
+  }
+}
+
+.nearest-events {
+  color: #fff;
+}
+
+.nearest-events__title {
+  font: 400 16px/1 'gilroy';
+  margin-bottom: 16px;
+}
+
+.nearest-events__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @media only screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.nearest-events__list-item {
+  &:hover {
+    cursor: pointer;
+
+    .list-item__box-shadow {
+      transition: all .3s ease;
+      opacity: 1;
+    }
+  }
+}
+
+.list-item__image-wrapper {
+  position: relative;
+  height: 82px;
+  width: 360px;
+}
+
+.list-item__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.list-item__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 136px;
+  height: 40px;
+
+  color: #fff;
+  font: 400 14px/1 'gilroy';
+  background: #8424FE;
+  border-radius: 5px;
+
+  position: absolute;
+  right: 18px;
+  bottom: 21px;
+  z-index: 3;
+}
+
+.list-item__box-shadow {
+  position: absolute;
+  width: calc(100% - 9px);
+  height: calc(100% - 40px);
+  left: 4px;
+  top: 18px;
+  box-shadow: 0 0 50px rgb(112 30 217 / 80%);
+  z-index: 1;
+  opacity: 0;
+  transition: all .3s ease;
+
+}
+
+.tasks__types-switcher {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.types-switcher__button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #9A9A9A;
+  font: 400 16px/1 'gilroy';
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &.active {
+    color: #fff;
+    font-weight: 700;
+    transition: all .3s ease;
+
+    .types-switcher__button-image {
+      color: #8223FA;
+      transition: all .3s ease;
+    }
+  }
+}
+
+.list-item__description {
+  font: 700 16px/1 'gilroy';
+  margin-top: 16px;
+}
+
+.container.tasks__container {
+  padding-top: 30px;
+  padding-bottom: 85px;
+
+  display: flex;
+  gap: 25px;
+
+  @media screen and (max-width: 1366px) {
+    flex-direction: column;
+  }
+}
+
+.tasks__list {
+  width: 400px;
+  height: 450px;
+}
+
+.content-item__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8223FA;
+  font: 400 16px/1 'gilroy';
+
+  margin-bottom: 20px;
+}
+
+.content-item__task {
+  height: 48px;
+  width: calc(100% - 6px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  padding: 0 90px 0 25px;
+  margin-left: 2px;
+  margin-bottom: 24px;
+
+  &.content-item__task--done {
+    .status-icon__done {
+      display: block;
+    }
+
+    .status-icon__active {
+      display: none;
+    }
+
+    .task__luminosity-block {
+      mix-blend-mode: luminosity;
+      opacity: 0.4;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 2px;
+  }
+}
+
+.status-icon__active {
+  display: block;
+  height: 15px;
+  width: auto;
+}
+
+.status-icon__done {
+  display: none;
+  mix-blend-mode: unset;
+  background: linear-gradient(93.79deg, #8424FE 0%, #651BC4 100%);
+  box-shadow: 0 0 3px rgba(131, 35, 252, 0.1);
+
+  width: 15px;
+  height: 15px;
+
+  padding: 0 2px;
+}
+
+.task__luminosity-block {
+  display: flex;
+  align-items: center;
+}
+
+.task__profit-points {
+  font: 700 16px/1 'gilroy';
+  margin: 0 15px 0 12px;
+  white-space: nowrap;
+}
+
+.task__title {
+  font: 400 16px/1.4 'gilroy';
+}
+
+.task__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+}
+
+.task__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.task__border {
+  z-index: -2;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(276.06deg, #A87327 -11.24%, #EFD67B 38.05%, #F1D988 47.21%, #F6E3A9 64.06%, #F8E7B9 70.9%, #F6E3AC 79.51%, #F1DA8B 95.3%, #EFD67B 101.72%, #E6C970 112.53%, #CEA753 132.44%, #A87327 158.2%);
+
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+
+  clip-path: polygon(
+                  0 0,
+                  100% 0,
+                  100% 100%,
+                  0 100%,
+                  0 0,
+                  2px 2px,
+                  2px calc(100% - 2px),
+                  calc(100% - 2px) calc(100% - 2px),
+                  calc(100% - 2px) 2px,
+                  2px 2px
+  );
+}
+
+.player-tabs {
+  width: 100%;
+  height: 642px;
+}
+
+.table--maps, .table--tournaments {
+  .table__header, .body__row {
+    grid-template-columns: 3fr 1fr 1fr 1fr 2fr .5fr;
+  }
+
+  .row__col {
+    display: flex;
+    align-items: center;
+
+    &.row__map-col {
+      display: flex;
+      align-items: center;
+    }
+
+    .map-col__image {
+      width: 105px;
+      height: 48px;
+
+      margin-right: 30px;
+    }
+
+    .tournament-col__image {
+      width: 45px;
+      height: 45px;
+
+      margin-right: 17px;
+    }
+
+    .map-col__title {
+      display: block;
+    }
+
+    .map-col__id {
+      display: block;
+      color: #AAA5A5;
+      margin-top: 5px;
+    }
+
+    &.row__result-col {
+      color: #10AA1B;
+
+      &.negative {
+        color: #F12619;
+      }
+    }
+
+    &.row__prize-fund-col {
+      font-weight: 600;
+      img {
+        margin-left: 5px;
+      }
+    }
+
+    &.row__action-col {
+      cursor: pointer;
+    }
+  }
+}
+
+.table--tournaments {
+  .table__header, .body__row {
+    grid-template-columns: 3fr 1fr 1.5fr 1fr 1fr .5fr;
+  }
+}
+
+.stream__video-wrapper {
+  position: relative;
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 406px;
+
+    top: -2px;
+    left: -2px;
+    background: #8223FA;
+  }
+}
+
+.stream__info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 24px;
+}
+
+.stream__info-left {
+  display: flex;
+  align-items: center;
+}
+
+.stream__avatar-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  padding: 4px;
+
+  border: 2px solid transparent;
+  border-radius: 100%;
+
+  margin-right: 18px;
+
+  &:after {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+    border-radius: 100%;
+    background: linear-gradient(276.06deg, #A87327 -11.24%, #EFD67B 38.05%, #F1D988 47.21%, #F6E3A9 64.06%, #F8E7B9 70.9%, #F6E3AC 79.51%, #F1DA8B 95.3%, #EFD67B 101.72%, #E6C970 112.53%, #CEA753 132.44%, #A87327 158.2%);
+  }
+
+  &.online {
+    border-color: #10AA1B;
+
+    .stream__avatar-online {
+      opacity: 1;
+    }
+  }
+  &.vip {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.stream__avatar-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.stream__avatar-online {
+  opacity: 0;
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 10px/1 'gilroy';
+  color: #fff;
+  background: #10AA1B;
+  border-radius: 2px;
+
+  width: 100%;
+  height: 18px;
+  padding: 5px;
+}
+
+.stream__title {
+  color: #fff;
+  font: 700 16px/1 'gilroy';
+
+  margin-bottom: 11px;
+  max-width: 260px;
+}
+
+.stream__nickname {
+  color: #fff;
+  font: 400 16px/1 'gilroy';
+}
+
+.stream__info-right {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+}
+
+.stream__viewers {
+  color: #fff;
+  font: 400 16px/1 'gilroy';
+  margin-right: 12px;
+
+  display: flex;
+  align-items: center;
+}
+
+.stream__viewers-icon {
+  display: block;
+  width: 12px;
+  height: 16px;
+
+  margin-right: 12px;
+}
+
+.stream__time {
+  font: 400 16px/1 'gilroy';
+  color: #8424FE;
+
+  margin-right: 20px;
+}
+
+.stream__share {
+  display: block;
+}
+
+.stream__share-icon {
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,381 @@
+.header {
+  height: 70px;
+  display: flex;
+  background: #20063E;
+}
+
+.container.header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__gradient-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.header__gradient-type-one,
+.header__gradient-type-two,
+.header__gradient-type-tree {
+  position: absolute;
+  height: 42px;
+  width: 50%;
+  top: -28px;
+  left: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #C819EC 0%, rgba(52, 2, 110, 0) 78.12%);
+  transform: rotate(180deg);
+  opacity: .7;
+}
+
+.header__gradient-type-two {
+  right: 0;
+  left: unset;
+}
+
+.header__gradient-type-tree {
+  top: unset;
+  left: 25%;
+  bottom: -26px;
+}
+
+.header__left, .header__right {
+  display: flex;
+  align-items: center
+}
+
+.header__navigation {
+  margin-left: 18px;
+  font: 600 16px/1 'gilroy';
+  color: #fff;
+}
+
+.header__lang-switcher {
+  display: flex;
+  align-items: center;
+  font: 500 16px/1 'gilroy';
+  color: #9A9A9A;
+
+  margin-right: 24px;
+}
+
+.lang-switcher__option {
+  cursor: pointer;
+
+  &.active {
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.lang-switcher__splitter {
+  padding: 0 5px;
+}
+
+.header__notifications {
+  position: relative;
+  margin-right: 29px;
+
+  &.active {
+    .notifications__active {
+      opacity: 1;
+    }
+  }
+}
+
+.notifications__active {
+  opacity: 0;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+}
+
+.notifications__image {
+  width: 19px;
+  height: auto;
+}
+
+.header__profile-wrapper {
+  width: 42px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &.active {
+    .header__profile-open {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .header__profile-close {
+      opacity: 1;
+      pointer-events: unset;
+    }
+
+    .header__profile, .header__profile-border {
+      opacity: 1;
+      pointer-events: unset;
+      transition: all .7s ease;
+    }
+  }
+}
+
+.header__profile-open, .header__profile-close {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.header__profile-open {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.header__profile-close {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header__profile, .header__profile-border {
+  opacity: 0;
+  pointer-events: none;
+
+  position: absolute;
+}
+
+.header__profile {
+  top: 33px;
+  right: 3px;
+  width: 294px;
+  height: auto;
+  z-index: 10;
+  transition: all .3s ease;
+}
+
+.profile--vip {
+  .profile__avatar-wrapper:after, .info-nickname__vip-icon {
+    opacity: 1;
+  }
+
+  .profile__vip-button {
+    background: #868686;
+
+    .profile__add-icon {
+      display: none;
+    }
+
+    .profile__vip-button-icon {
+      color: #7E7E7E;
+    }
+  }
+}
+
+.header__profile-border {
+  top: -3px;
+  right: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  z-index: 1;
+
+  box-shadow: 0 10px 13px #1A0037;
+    background: linear-gradient(0deg, rgba(99, 46, 220, 1) 0%, rgba(32, 6, 62, 1) 100%);
+}
+
+.header__profile-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #20063E;
+  padding: 15px 25px 15px 20px;
+}
+
+.profile__top {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.profile__avatar-wrapper {
+  position: relative;
+  margin-right: 17px;
+
+  &:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+
+    left: -2px;
+    top: -2px;
+    z-index: -1;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+
+    border-radius: 100%;
+    background: linear-gradient(276.06deg, #A87327 -11.24%, #EFD67B 38.05%, #F1D988 47.21%, #F6E3A9 64.06%, #F8E7B9 70.9%, #F6E3AC 79.51%, #F1DA8B 95.3%, #EFD67B 101.72%, #E6C970 112.53%, #CEA753 132.44%, #A87327 158.2%);
+  }
+}
+
+.profile__avatar {
+  display: block;
+  height: 47px;
+  width: 47px;
+}
+
+.profile__avatar-online {
+  position: absolute;
+  left: -3px;
+  top: -5px;
+}
+
+.profile__info-nickname, .profile__info-rating {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.profile__info-nickname {
+  margin-bottom: 5px;
+}
+
+.info-nickname__vip-icon {
+  opacity: 0;
+  margin-right: 5px;
+  width: 17px;
+  height: 14px;
+}
+
+.info-rating__icon {
+  margin-right: 10px;
+  width: 12px;
+  height: 8px;
+}
+
+.info-nickname__text {
+  font: 700 16px/1 'gilroy';
+}
+
+.info-rating__text {
+  font: 400 16px/1 'gilroy';
+}
+
+.profile__play-button, .profile__vip-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  font: 400 16px/1 'gilroy';
+
+  margin-bottom: 12px;
+}
+
+.profile__play-button {
+  background: #8424FE;
+
+  &:hover {
+    background: #22B21F;
+  }
+}
+
+.profile__button-text {
+  position: relative;
+}
+
+.profile__add-icon {
+  position: absolute;
+  top: 46%;
+  left: -18px;
+  transform: translate(0, -50%);
+}
+
+.profile__vip-button {
+  background: #BD9749;
+}
+
+.profile__vip-button-icon {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  color: #F5E1A4;
+}
+
+.profile__currency-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile__currency {
+  display: flex;
+  align-items: center;
+  font: 400 16px/1 'gilroy';
+  color: #fff;
+}
+
+.profile__currency-icon {
+  margin: 0 10px;
+}
+
+.profile__currency-value {
+  font-weight: 700;
+}
+
+.profile__divider {
+  height: 1px;
+  margin: 10px 0;
+  background: #632EDC;
+}
+
+.profile__menu-item {
+  display: flex;
+  align-items: center;
+  color: #9A9A9A;
+  font: 500 16px/1 "gilroy";
+
+  transition: all .3s ease;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    .profile__menu-text {
+      color: #fff;
+      font-weight: 700;
+      transition: all .3s ease;
+      bottom: 4px;
+    }
+
+    .profile__menu-icon {
+      transition: all .3s ease;
+      color: #8223FA;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile__menu-text {
+  position: absolute;
+  left: 30px;
+  bottom: 3px;
+}
+
+.profile__menu-icon {
+  transition: all .3s ease;
+}
+

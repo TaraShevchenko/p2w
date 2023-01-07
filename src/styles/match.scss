@@ -1,0 +1,142 @@
+.container--match {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.match__mode-selector {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.mode-selector__icon {
+  color: #8223FA;
+  margin-right: 10px;
+}
+
+.mode-selector__title {
+  color: #fff;
+  font: 400 16px/1 'gilroy';
+  margin-right: 25px;
+}
+
+.table--match {
+  width: 100%;
+  height: 100%;
+  max-height: 485px;
+
+  display: block;
+
+  .table__header, .body__row {
+    grid-template-columns: 3fr 3fr 1fr 1fr 1fr 1.5fr .3fr;
+  }
+
+  .row__col {
+    display: flex;
+    align-items: center;
+
+    &.row__map-col {
+      display: flex;
+      align-items: center;
+    }
+
+    .map-col__image {
+      width: 105px;
+      height: 48px;
+
+      margin-right: 30px;
+    }
+
+    .map-col__title {
+      display: block;
+    }
+
+    .map-col__id {
+      display: block;
+      color: #AAA5A5;
+      margin-top: 5px;
+    }
+
+    &.creator-col--vip {
+      .creator-col__image-wrapper {
+        &:before {
+          content: '';
+        }
+      }
+      .creator-col__vip-image {
+        display: block;
+      }
+    }
+
+    .creator-col__image-wrapper {
+      position: relative;
+      display: block;
+
+      margin-right: 15px;
+      &:before {
+        position: absolute;
+        z-index: -1;
+
+        left: -1px;
+        top: -1px;
+        border-radius: 100%;
+
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background: linear-gradient(276.06deg, #A87327 -11.24%, #EFD67B 38.05%, #F1D988 47.21%, #F6E3A9 64.06%, #F8E7B9 70.9%, #F6E3AC 79.51%, #F1DA8B 95.3%, #EFD67B 101.72%, #E6C970 112.53%, #CEA753 132.44%, #A87327 158.2%);
+      }
+    }
+
+    .creator-col__image {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .creator-col__vip-image {
+      display: none;
+
+      width: 18px;
+      height: auto;
+
+      margin-right: 6px;
+    }
+
+    .creator-col__lock-opened, .creator-col__lock-closed {
+      display: none;
+      width: 15px;
+      height: auto;
+
+      margin-left: 18px;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .row__col-country {
+      width: 20px;
+      height: 20px;
+    }
+
+    .connection-col__good-image, .connection-col__middle-image, .connection-col__bad-image {
+      display: none;
+
+      width: 16px;
+      height: 17px;
+
+      margin-right: 10px;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &.row__action-col {
+      cursor: pointer;
+    }
+  }
+}
