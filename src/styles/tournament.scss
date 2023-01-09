@@ -286,3 +286,352 @@
 .tournaments-match {
   padding: 49px 0 37px;
 }
+
+.tournaments-bracket {
+  padding: 43px 0 95px;
+  overflow: hidden;
+}
+
+.tournaments-bracket__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 19px;
+  margin-bottom: 41px;
+
+  &:before {
+    inset: 0;
+    content: "";
+    position: absolute;
+    width: calc(100% + 1px);
+    left: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+                    276.06deg,
+                    #8223FA 0%,
+                    #1E1856 25%,
+                    #B51AE6 50%,
+                    #1E1856 75%,
+                    #8223FA 100%
+    );
+    clip-path: polygon(
+                    0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%,
+                    0 0,
+                    1px 1px,
+                    1px calc(100% - 1px),
+                    calc(100% - 1px) calc(100% - 1px),
+                    calc(100% - 1px) 1px,
+                    1px 1px
+    );
+  }
+}
+
+.tournaments-bracket__header-filter {
+  position: relative;
+}
+
+.header-filter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 215px;
+}
+
+.header-filter__info {
+}
+
+.header-filter__value {
+  color: #fff;
+  font: 700 16px/1 "gilroy";
+  margin-bottom: 5px;
+}
+
+.header-filter__date {
+  color: #9A9A9A;
+  font: 400 12px/1 "gilroy";
+}
+
+.header-filter__arrow {
+  color: #fff;
+}
+
+.header-filter__content {
+  left: -17px;
+  top: calc(100% + 13px);
+  width: calc(100% + 17px);
+
+  &:after {
+    width: calc(100% + 1px);
+    background: linear-gradient(
+                    276.06deg,
+                    #8223FA 0%,
+                    #1E1856 25%,
+                    #B51AE6 50%,
+                    #1E1856 75%,
+                    #8223FA 100%
+    );
+    clip-path: polygon(
+                    0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%,
+                    0 0,
+                    1px 1px,
+                    1px calc(100% - 1px),
+                    calc(100% - 1px) calc(100% - 1px),
+                    calc(100% - 1px) 1px,
+                    1px 1px
+    );
+  }
+}
+
+.tournaments-bracket__header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-navigation__left, .header-navigation__right {
+  color: #fff;
+
+  &:disabled {
+    color: #9A9A9A;
+    cursor: default;
+  }
+}
+
+.header-navigation__left {
+  transform: rotate(90deg);
+}
+
+.header-navigation__right {
+  transform: rotate(-90deg);
+}
+
+.tournaments-bracket__table {
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+
+  transition: all .5s ease;
+}
+
+.tournaments-bracket__table-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+
+  padding-top: 72px;
+  color: #fff;
+  transition: all .5s ease;
+}
+
+.table-column__title {
+  top: 0;
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 16px/1 "gilroy";
+
+  width: 100%;
+  height: 40px;
+  border: 1px solid #691CCB;
+}
+
+.table-column__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  min-width: 0;
+  position: relative;
+}
+
+.table-column__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+
+  position: relative;
+  padding: 50px 0;
+
+  &:first-child {
+    padding-top: 20px;
+    &:before {
+      content: "";
+      margin: -15px 0 0;
+    }
+    &:after {
+      content: "";
+      margin: -15px 0 0;
+    }
+    &:nth-child(2n):after {
+       top: 20px;
+       bottom: 50%;
+     }
+    &:nth-child(2n):before {
+      top: 50%;
+      bottom: 50%;
+      margin: 0 0 -15px;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    &:nth-child(2n):after {
+      top: 20px;
+      bottom: calc(50% - 25px);
+    }
+    &:nth-child(2n):before {
+      top: calc(50% + 25px);
+      bottom: 50%;
+      margin: 0;
+    }
+  }
+
+  &:before {
+    content: "";
+    height: 1px;
+    width: 40px;
+    margin: 0;
+
+    position: absolute;
+    right: -40px;
+    top: calc(50% - 0.5px);
+
+    background: #9A9A9A;
+  }
+  &:after {
+    content: "";
+    width: 1px;
+    margin: 0;
+
+    position: absolute;
+    top: 50%;
+    bottom: 20px;
+    right: -40px;
+
+    background: #9A9A9A;
+  }
+  &:nth-child(2n):after {
+    top: 20px;
+    bottom: 50%;
+  }
+  &:nth-child(2n):before {
+    top: calc(50% - 0.5px);
+    bottom: 50%;
+    margin: 0 0 -15px;
+  }
+}
+
+.table-column__item-info-wrapper {
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 1px;
+    width: 37px;
+    margin: 0;
+
+    position: absolute;
+    top: 19px;
+    left: -37px;
+
+    background: #9A9A9A;
+  }
+  &:after {
+    content: "";
+    height: 1px;
+    width: 37px;
+
+    position: absolute;
+    bottom: 19px;
+    left: -37px;
+
+    background: #9A9A9A;
+  }
+}
+
+.table-column__item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+
+  font: 400 12px/1 "gilroy";
+  color: #9A9A9A;
+
+  position: absolute;
+  width: 100%;
+  top: -20px;
+}
+
+.table-column__item-team {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font: 400 16px/1 "gilroy";
+
+  width: 100%;
+  height: 40px;
+  border: 1px solid #691CCB;
+
+  padding-left: 16px;
+
+  &:last-child {
+    margin-top: -1px;
+  }
+
+  &:before {
+    content: "";
+    background-color: #979797;
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 38px;
+  }
+}
+
+.item-team__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.item-team__name {
+}
+
+.item-team__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 36px;
+  margin-left: auto;
+  border-left: 1px solid #691CCB;
+  font-weight: 700;
+
+  &.green {
+    color: #22B21F;
+  }
+  &.red {
+    color: #FF0000;
+  }
+}
+
+.item-team__blank {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
