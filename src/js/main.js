@@ -136,3 +136,36 @@ const handleInitDropdown = () => {
 }
 
 handleInitDropdown();
+
+//TournamentsBracket
+const tournamentsBracketNavigationNext = document.querySelector('.header-navigation__right');
+const tournamentsBracketNavigationPrev = document.querySelector('.header-navigation__left');
+const tournamentsBracketTable = document.querySelector('.tournaments-bracket__table');
+
+if (tournamentsBracketTable) {
+    let carouselShift = 0;
+    const childrenCount = tournamentsBracketTable?.children?.length
+    tournamentsBracketTable.style.width = `${316 * childrenCount - 76}px`
+
+    tournamentsBracketNavigationPrev.disabled = true;
+    tournamentsBracketNavigationNext.disabled = childrenCount <= 4;
+    tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable?.children[0].clientHeight + 72}px`;
+
+    const scrollNextTournamentsBracketTable = () => {
+        carouselShift += 1;
+        tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable.clientHeight / 2}px`;
+        tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
+        tournamentsBracketNavigationPrev.disabled = false;
+        tournamentsBracketNavigationNext.disabled = (childrenCount - carouselShift) <= 4;
+    }
+    const scrollPrevTournamentsBracketTable = () => {
+        carouselShift -= 1;
+        tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable.clientHeight * 2}px`;
+        tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
+        tournamentsBracketNavigationNext.disabled = false;
+        tournamentsBracketNavigationPrev.disabled = carouselShift === 0;
+    }
+
+    tournamentsBracketNavigationNext.addEventListener('click', scrollNextTournamentsBracketTable)
+    tournamentsBracketNavigationPrev.addEventListener('click', scrollPrevTournamentsBracketTable)
+}
