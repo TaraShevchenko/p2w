@@ -95,7 +95,7 @@ const handleInitTab = () => {
 
         if (navigationElements?.length === contentElements?.length) {
             for (let j = 0; j < navigationElements.length; j++) {
-                j === 0 && handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j], withCustomScroll);
+                j === 5 && handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j], withCustomScroll);
 
                 navigationElements[j].addEventListener('click',
                     () => handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j], withCustomScroll)
@@ -147,20 +147,30 @@ if (tournamentsBracketTable) {
     const childrenCount = tournamentsBracketTable?.children?.length
     tournamentsBracketTable.style.width = `${316 * childrenCount - 76}px`
 
-    tournamentsBracketNavigationPrev.disabled = true;
-    tournamentsBracketNavigationNext.disabled = childrenCount <= 4;
-    tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable?.children[0].clientHeight + 72}px`;
+    const firstTableColumnChildrenCount = tournamentsBracketTable?.children[0].children[1].children.length;
+    const tableColumnOffset = 72;
+    const tableColumnItemHeight = 179;
+    const tableColumnLastItemHeight = 129;
+    const tableColumnFirstItemHeight = 149;
+
+    const calculateColumnHeight = (childrenCount) => {
+        return `${(childrenCount - 2) * tableColumnItemHeight + tableColumnFirstItemHeight + tableColumnLastItemHeight + tableColumnOffset}px`;
+    }
+
+    tournamentsBracketTable.style.maxHeight = calculateColumnHeight(firstTableColumnChildrenCount);
 
     const scrollNextTournamentsBracketTable = () => {
         carouselShift += 1;
-        tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable.clientHeight / 2}px`;
+        const currentTableColumnChildrenCount = tournamentsBracketTable?.children[carouselShift].children[1].children.length;
+        tournamentsBracketTable.style.maxHeight = calculateColumnHeight(currentTableColumnChildrenCount);
         tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationPrev.disabled = false;
         tournamentsBracketNavigationNext.disabled = (childrenCount - carouselShift) <= 4;
     }
     const scrollPrevTournamentsBracketTable = () => {
         carouselShift -= 1;
-        tournamentsBracketTable.style.maxHeight = `${tournamentsBracketTable.clientHeight * 2}px`;
+        const currentTableColumnChildrenCount = tournamentsBracketTable?.children[carouselShift].children[1].children.length;
+        tournamentsBracketTable.style.maxHeight = calculateColumnHeight(currentTableColumnChildrenCount);
         tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationNext.disabled = false;
         tournamentsBracketNavigationPrev.disabled = carouselShift === 0;
