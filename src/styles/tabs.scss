@@ -304,8 +304,9 @@
 
     .ss-content {
       padding: 0 28px 0 26px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
-
 
     .ss-scroll {
       position: absolute;
@@ -326,7 +327,7 @@
     }
   }
 
-  .tab__content-scroll-item {
+  .custom-scroll-wrapper--tab {
     display: flex;
     flex-direction: column;
     width: calc(100% + 28px);
