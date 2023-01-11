@@ -7,6 +7,9 @@
   width: 100%;
   background: #191D21;
   z-index: 2;
+  @media only screen and (max-width: 1200px) {
+    min-width: 992px;
+  }
 }
 
 .footer__gradient {
@@ -36,10 +39,10 @@
   @media only screen and (max-width: 1200px) {
     flex-wrap: wrap;
   }
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 40px;
-  }
+  //@media only screen and (max-width: 768px) {
+  //  flex-direction: column;
+  //  gap: 40px;
+  //}
 }
 
 .footer__list-item {
@@ -50,15 +53,15 @@
       margin-top: 40px;
     }
   }
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-
-    &:nth-child(2n) {
-      order: unset;
-      width: 100%;
-      margin-top: unset;
-    }
-  }
+  //@media only screen and (max-width: 768px) {
+  //  width: 100%;
+  //
+  //  &:nth-child(2n) {
+  //    order: unset;
+  //    width: 100%;
+  //    margin-top: unset;
+  //  }
+  //}
 }
 
 .list-item__title {
@@ -108,4 +111,5 @@
 
 .list-item__info-link {
   display: block;
+  font: 400 16px/1 'gilroy';
 }

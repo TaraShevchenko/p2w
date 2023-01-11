@@ -42,12 +42,23 @@ headerMenuCloseButton.addEventListener('click', handleHeaderMenuToggle);
 // Tabs
 const addCustomScroll = (element) => {
     const scrollBorder = document.createElement('span');
-    scrollBorder.classList.add('tab__content-scroll-border')
+    scrollBorder.classList.add('custom-scroll-border')
     SimpleScrollbar.initEl(element)
     element.appendChild(scrollBorder)
 }
 
-const handleOpenTab = (navigationElements, contentElements, navigationElement, contentElement, withCustomScroll) => {
+const initCustomScroll = () => {
+    const allScrollWrappers = document.querySelectorAll('.custom-scroll-wrapper');
+    for (let i = 0; i < allScrollWrappers.length; i++) {
+        console.log(allScrollWrappers[i], allScrollWrappers[i].scrollHeight, allScrollWrappers[i].offsetHeight)
+        if (allScrollWrappers[i].scrollHeight > allScrollWrappers[i].offsetHeight) {
+            addCustomScroll(allScrollWrappers[i]);
+        }
+    }
+}
+initCustomScroll();
+
+const handleOpenTab = (navigationElements, contentElements, navigationElement, contentElement) => {
     for (let i = 0; i < navigationElements.length; i++) {
         navigationElements[i].classList.remove('active')
     }
@@ -58,29 +69,24 @@ const handleOpenTab = (navigationElements, contentElements, navigationElement, c
     navigationElement.classList.add('active')
     contentElement.classList.add('active')
 
-    if (withCustomScroll) {
-        let scrollInScrollWrapper = false;
-        for (let i = 0; i < contentElement.children.length; i++) {
-            if (contentElement.children[i].classList.contains('tab__content-scroll-item')) {
-                if (contentElement.children[i].scrollHeight > contentElement.children[i].offsetHeight) {
-                    addCustomScroll(contentElement.children[i])
-                }
-                scrollInScrollWrapper = true;
+    const customScrollElements = contentElement.querySelectorAll('.custom-scroll-wrapper--tab');
+    if (customScrollElements.length) {
+        for (let i = 0; i < customScrollElements.length; i++) {
+            if (customScrollElements[i].scrollHeight > customScrollElements[i].offsetHeight) {
+                addCustomScroll(customScrollElements[i])
             }
         }
-
-        if (contentElement.scrollHeight > contentElement.offsetHeight && !scrollInScrollWrapper) {
+    } else {
+        if (contentElement.scrollHeight > contentElement.offsetHeight) {
             addCustomScroll(contentElement)
         }
     }
-
 }
 
 const handleInitTab = () => {
     const allTabs = document.querySelectorAll('.tab__wrapper');
 
     for (let i = 0; i < allTabs.length; i++) {
-        const withCustomScroll = allTabs[i].classList.contains('tab--in-frame');
         let navigationElements;
         let contentElements;
 
@@ -95,16 +101,15 @@ const handleInitTab = () => {
 
         if (navigationElements?.length === contentElements?.length) {
             for (let j = 0; j < navigationElements.length; j++) {
-                j === 5 && handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j], withCustomScroll);
+                j === 0 && handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j]);
 
                 navigationElements[j].addEventListener('click',
-                    () => handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j], withCustomScroll)
+                    () => handleOpenTab(navigationElements, contentElements, navigationElements[j], contentElements[j])
                 );
             }
         }
     }
 }
-
 handleInitTab();
 
 //Dropdown
@@ -144,14 +149,21 @@ const tournamentsBracketTable = document.querySelector('.tournaments-bracket__ta
 
 if (tournamentsBracketTable) {
     let carouselShift = 0;
-    const childrenCount = tournamentsBracketTable?.children?.length
-    tournamentsBracketTable.style.width = `${316 * childrenCount - 76}px`
-
-    const firstTableColumnChildrenCount = tournamentsBracketTable?.children[0].children[1].children.length;
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const tableGap = 76;
     const tableColumnOffset = 72;
+    const tableColumnItemWidth = vw > 1200 ? 316 : 259;
     const tableColumnItemHeight = 179;
     const tableColumnLastItemHeight = 129;
     const tableColumnFirstItemHeight = 149;
+    const childrenCount = tournamentsBracketTable?.children?.length
+    tournamentsBracketTable.style.width = `${tableColumnItemWidth * childrenCount - tableGap}px`
+
+    tournamentsBracketNavigationPrev.disabled = true;
+    tournamentsBracketNavigationNext.disabled = childrenCount <= 4;
+
+    const firstTableColumnChildrenCount = tournamentsBracketTable?.children[0].children[1].children.length;
+
 
     const calculateColumnHeight = (childrenCount) => {
         return `${(childrenCount - 2) * tableColumnItemHeight + tableColumnFirstItemHeight + tableColumnLastItemHeight + tableColumnOffset}px`;
@@ -163,7 +175,7 @@ if (tournamentsBracketTable) {
         carouselShift += 1;
         const currentTableColumnChildrenCount = tournamentsBracketTable?.children[carouselShift].children[1].children.length;
         tournamentsBracketTable.style.maxHeight = calculateColumnHeight(currentTableColumnChildrenCount);
-        tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
+        tournamentsBracketTable.style.transform = `translate3d(-${tableColumnItemWidth * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationPrev.disabled = false;
         tournamentsBracketNavigationNext.disabled = (childrenCount - carouselShift) <= 4;
     }
@@ -171,7 +183,7 @@ if (tournamentsBracketTable) {
         carouselShift -= 1;
         const currentTableColumnChildrenCount = tournamentsBracketTable?.children[carouselShift].children[1].children.length;
         tournamentsBracketTable.style.maxHeight = calculateColumnHeight(currentTableColumnChildrenCount);
-        tournamentsBracketTable.style.transform = `translate3d(-${316 * carouselShift}px, 0px, 0px)`;
+        tournamentsBracketTable.style.transform = `translate3d(-${tableColumnItemWidth * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationNext.disabled = false;
         tournamentsBracketNavigationPrev.disabled = carouselShift === 0;
     }
