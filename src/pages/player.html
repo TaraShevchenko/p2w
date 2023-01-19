@@ -715,78 +715,58 @@
                 </span>
             </div>
             <div class="tab__content">
-                <div class="tab__content-item table--maps table__wrapper">
-
+                <div class="tab__content-item table__wrapper table--with-filters table--with-pagination table--player-match">
                     <div class="table__filters">
-
                         <div class="filters__dropdown_wrapper">
-
                             <div class="filters__dropdown dropdown">
                                 <div class="dropdown__header">
-
-                                    По времени
-
+                                    <p>По времени</p>
                                     <span class="dropdown__header-icon">
-                                            <svg width="5" height="8" viewBox="0 0 5 8" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z"
-                                                      fill="currentColor"/>
-                                            </svg>
-                                        </span>
-
+                                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                    </span>
                                 </div>
-
                                 <div class="dropdown__content">
-                                        <span class="dropdown__content-item active">
-                                            Планируются
-                                        </span>
-
+                                    <span class="dropdown__content-item active">
+                                        Планируются
+                                    </span>
                                     <span class="dropdown__content-item">
-                                            Текущие
-                                        </span>
-
+                                        Текущие
+                                    </span>
                                     <span class="dropdown__content-item">
-                                            Прошедшие
-                                        </span>
+                                        Прошедшие
+                                    </span>
                                 </div>
-
                             </div>
-
                             <div class="filters__dropdown dropdown">
                                 <div class="dropdown__header">
-
-                                    Результат
-
+                                    <p>Результат</p>
                                     <span class="dropdown__header-icon">
-                                            <svg width="5" height="8" viewBox="0 0 5 8" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z"
-                                                      fill="currentColor"/>
-                                            </svg>
-                                        </span>
-
+                                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                    </span>
                                 </div>
-
                                 <div class="dropdown__content">
-                                        <span class="dropdown__content-item active">
-                                            Планируются
-                                        </span>
-
+                                    <span class="dropdown__content-item active">
+                                        Планируются
+                                    </span>
                                     <span class="dropdown__content-item">
-                                            Текущие
-                                        </span>
-
+                                        Текущие
+                                    </span>
                                     <span class="dropdown__content-item">
-                                            Прошедшие
-                                        </span>
+                                        Прошедшие
+                                    </span>
                                 </div>
-
                             </div>
-
                             <div class="filters__dropdown-reset">
                                 Сбросить
                             </div>
-
                         </div>
 
                         <div class="filters__options">
@@ -800,8 +780,7 @@
                         </div>
 
                     </div>
-
-                    <div class="table__header">
+                    <div class="table__header table__template-columns">
                         <div class="header__col header__col-main">
                             Карта
                         </div>
@@ -818,27 +797,26 @@
                             Результат
                         </div>
                     </div>
-
                     <div class="table__body custom-scroll-wrapper--tab">
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-negative">Поражение -8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -848,25 +826,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map2.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-positive">Поражение +8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -876,25 +854,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map3.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-negative">Поражение -8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -904,25 +882,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map4.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-positive">Поражение +8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -932,25 +910,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-negative">Поражение -8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -960,25 +938,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map2.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-positive">Поражение +8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -988,25 +966,25 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map3.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-negative">Поражение -8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -1016,25 +994,137 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="map-col__image" src="../images/playerPage/Map4.png" alt="Map1">
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                                 <div>
-                                    <p class="map-col__title">Dust II</p>
-                                    <span class="map-col__id">#81931232</span>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                12/5/2
+                                <p>12/5/2</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p>3:16</p>
                             </div>
                             <div class="row__col row__result-col negative">
-                                Поражение -8.21
+                                <p class="row__result-positive">Поражение +8.21</p>
+                            </div>
+                            <button class="row__col row__action-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
+                                     fill="none">
+                                    <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
+                                          fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
+                                <div>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
+                                </div>
+                            </div>
+                            <div class="row__col">
+                                <p>5v5</p>
+                            </div>
+                            <div class="row__col">
+                                <p>12/5/2</p>
+                            </div>
+                            <div class="row__col">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col row__result-col negative">
+                                <p class="row__result-negative">Поражение -8.21</p>
+                            </div>
+                            <button class="row__col row__action-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
+                                     fill="none">
+                                    <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
+                                          fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
+                                <div>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
+                                </div>
+                            </div>
+                            <div class="row__col">
+                                <p>5v5</p>
+                            </div>
+                            <div class="row__col">
+                                <p>12/5/2</p>
+                            </div>
+                            <div class="row__col">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col row__result-col negative">
+                                <p class="row__result-positive">Поражение +8.21</p>
+                            </div>
+                            <button class="row__col row__action-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
+                                     fill="none">
+                                    <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
+                                          fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
+                                <div>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
+                                </div>
+                            </div>
+                            <div class="row__col">
+                                <p>5v5</p>
+                            </div>
+                            <div class="row__col">
+                                <p>12/5/2</p>
+                            </div>
+                            <div class="row__col">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col row__result-col negative">
+                                <p class="row__result-negative">Поражение -8.21</p>
+                            </div>
+                            <button class="row__col row__action-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
+                                     fill="none">
+                                    <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
+                                          fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
+                                <div>
+                                    <p class="row__col-title">Dust II</p>
+                                    <span class="row__col-subtitle">#81931232</span>
+                                </div>
+                            </div>
+                            <div class="row__col">
+                                <p>5v5</p>
+                            </div>
+                            <div class="row__col">
+                                <p>12/5/2</p>
+                            </div>
+                            <div class="row__col">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col row__result-col negative">
+                                <p class="row__result-positive">Поражение +8.21</p>
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -1240,7 +1330,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="tab__content-item table--tournaments table__wrapper">
+                <div class="tab__content-item table__wrapper table--with-filters table--player-tournaments">
                     <div class="table__filters">
 
                         <div class="filters__dropdown_wrapper">
@@ -1324,7 +1414,7 @@
                         </div>
 
                     </div>
-                    <div class="table__header">
+                    <div class="table__header table__template-columns">
                         <div class="header__col header__col-main">
                             Турнир
                         </div>
@@ -1343,26 +1433,27 @@
                     </div>
 
                     <div class="table__body custom-scroll-wrapper--tab">
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="tournament-col__image" src="../images/tournaments/TournamentLogo.png"
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__tournament-image" src="../images/tournaments/TournamentLogo.png"
                                      alt="TournamentLogo">
-                                <div class="map-col__info">
-                                    <p class="map-col__title">The FOX Winner</p>
-                                    <span class="map-col__id">CS:GO gaming</span>
+                                <div>
+                                    <p class="row__col-title">The FOX Winner</p>
+                                    <span class="row__col-subtitle">CS:GO gaming</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
-                            </div>
-                            <div class="row__col row__prize-fund-col">
-                                100 <img src="../images/profileMenu/Currency.svg" alt="Currency">
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p class="row__prize-text">100</p>
+                                <img class="row__prize-image" src="../images/profileMenu/Currency.svg" alt="Currency">
                             </div>
                             <div class="row__col">
-                                <img src="../images/playerPage/Country.svg" alt="country">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col">
+                                <img class="row__country-image" src="../images/playerPage/Country.svg" alt="country">
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -1372,26 +1463,27 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="body__row">
-                            <div class="row__col row__map-col">
-                                <img class="tournament-col__image" src="../images/tournaments/TournamentLogo.png"
+                        <div class="body__row table__template-columns">
+                            <div class="row__col">
+                                <img class="row__tournament-image" src="../images/tournaments/TournamentLogo.png"
                                      alt="TournamentLogo">
-                                <div class="map-col__info">
-                                    <p class="map-col__title">The FOX Winner</p>
-                                    <span class="map-col__id">CS:GO gaming</span>
+                                <div>
+                                    <p class="row__col-title">The FOX Winner</p>
+                                    <span class="row__col-subtitle">CS:GO gaming</span>
                                 </div>
                             </div>
                             <div class="row__col">
-                                5v5
-                            </div>
-                            <div class="row__col row__prize-fund-col">
-                                100 <img src="../images/profileMenu/Currency.svg" alt="Currency">
+                                <p>5v5</p>
                             </div>
                             <div class="row__col">
-                                3:16
+                                <p class="row__prize-text">100</p>
+                                <img class="row__prize-image" src="../images/profileMenu/Currency.svg" alt="Currency">
                             </div>
                             <div class="row__col">
-                                <img src="../images/playerPage/Country.svg" alt="country">
+                                <p>3:16</p>
+                            </div>
+                            <div class="row__col">
+                                <img class="row__country-image" src="../images/playerPage/Country.svg" alt="country">
                             </div>
                             <button class="row__col row__action-col">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"

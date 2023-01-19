@@ -51,45 +51,45 @@
   }
 
   .tournaments-tabs__item {
-     color: #9A9A9A;
-     cursor: pointer;
-     font: 400 16px/1 'gilroy';
+    color: #9A9A9A;
+    cursor: pointer;
+    font: 400 16px/1 'gilroy';
 
-     &.active {
-       color: #fff;
-       font-weight: 700;
-     }
-   }
+    &.active {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
 }
 
 .tab--in-frame {
   &:before {
-      inset: 0;
-      content: "";
-      position: absolute;
-      background: linear-gradient(
-                      276.06deg,
-                      #8223FA 0%,
-                      #1E1856 25%,
-                      #B51AE6 50%,
-                      #1E1856 75%,
-                      #8223FA 100%
-      );
-      clip-path: polygon(
-                      0 20.00px,
-                      20.00px 0,
-                      100% 0,
-                      100% 100%,
-                      0 100%,
-                      0 20.00px,
-                      2px calc(20.00px + 0.83px),
-                      2px calc(100% - 2px),
-                      calc(100% - 2px) calc(100% - 2px),
-                      calc(100% - 2px) 2px,
-                      calc(20.00px + 0.83px) 2px,
-                      2px calc(20.00px + 0.83px)
-      );
-    }
+    inset: 0;
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+                    276.06deg,
+                    #8223FA 0%,
+                    #1E1856 25%,
+                    #B51AE6 50%,
+                    #1E1856 75%,
+                    #8223FA 100%
+    );
+    clip-path: polygon(
+                    0 20.00px,
+                    20.00px 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%,
+                    0 20.00px,
+                    2px calc(20.00px + 0.83px),
+                    2px calc(100% - 2px),
+                    calc(100% - 2px) calc(100% - 2px),
+                    calc(100% - 2px) 2px,
+                    calc(20.00px + 0.83px) 2px,
+                    2px calc(20.00px + 0.83px)
+    );
+  }
 
   .tab__navigation {
     height: 50px;
@@ -196,6 +196,7 @@
 
     &.active {
       color: #fff;
+
       .tab__navigation-item-bg {
         clip-path: polygon(
                         0 0,
@@ -291,7 +292,6 @@
   .tab__content-item {
     position: relative;
     margin-right: 2px;
-
     padding: 0;
     height: 0;
     opacity: 0;
@@ -308,43 +308,59 @@
       overflow-x: hidden;
     }
 
-    .ss-scroll {
-      position: absolute;
-      right: 0 !important;
-
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-right: 6px solid #701ED9;
-      opacity: 1;
-    }
-
     &.active {
       opacity: 1;
       height: 100%;
       pointer-events: unset;
-
       padding: 18px 28px 18px 26px;
     }
   }
 
-  .custom-scroll-wrapper--tab {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% + 28px);
-    padding-right: 28px;
+  .table__wrapper {
+    &.tab__content-item {
+      padding: 0;
+    }
 
-    position: relative;
+    &:before {
+      display: none;
+    }
   }
 
-  .tab__content-scroll-border {
-    position: absolute;
-    right: 11px;
-    top: 0;
+  .table__filters {
+    margin-top: -2px;
+    padding-bottom: 16px;
 
-    background: linear-gradient(0deg, rgba(99, 46, 220, 1) 60%, rgba(32, 6, 62, 1) 120%);
+    .dropdown__content {
+      top: 32px
+    }
+  }
 
-    height: 100%;
-    width: 2px;
+  .table__header {
+    padding: 12px 30px 14px 28px;
+  }
+
+  .table__body {
+    &.ss-container {
+      padding-bottom: 12px;
+    }
+  }
+
+  .table--with-filters {
+    &.tab__content-item {
+      padding-top: 0;
+    }
+    .table__filters {
+      padding: 18px 43px 18px 29px;
+    }
+    .table__header {
+      padding: 15px 30px 15px 28px;
+    }
+  }
+
+  .table--with-filters.table--with-pagination {
+    .table__body {
+      max-height: calc(100% - 94px);
+    }
   }
 }
 

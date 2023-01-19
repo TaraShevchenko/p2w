@@ -178,10 +178,8 @@
 </header>
 
 <main class="main">
-    <div class="container container--match">
-
-        <div class="match__mode-selector">
-
+    <div class="container container--page-with-table">
+        <div class="page__filters">
             <span class="mode-selector__icon">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_14046)">
@@ -210,12 +208,10 @@
                     <span class="filters__option">1v1</span>
                 </div>
             </div>
-
         </div>
 
-        <div class="table__wrapper table--single table--with-pagination table--match">
-
-            <div class="table__header">
+        <div class="table__wrapper table--with-pagination table--match">
+            <div class="table__header table__template-columns">
                 <div class="header__col header__col-main">
                     Карта
                 </div>
@@ -235,40 +231,34 @@
                     Создан
                 </div>
             </div>
-
             <div class="table__body custom-scroll-wrapper">
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
+                <div class="body__row table__template-columns">
+                    <div class="row__col">
+                        <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                         <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
+                            <p class="row__col-title">Dust II</p>
+                            <span class="row__col-subtitle">#81931232</span>
                         </div>
                     </div>
-                    <div class="row__col creator-col--vip">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
+                    <div class="row__col row__player--vip">
+                        <span class="row__player-image-wrapper">
+                            <img class="row__player-image" src="../images/profileMenu/ProfileAvatar.png"
                                  alt="ProfileAvatar">
                         </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
+                        <img class="row__player-vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
                         <p>VuDrinKid</p>
-                        <img class="creator-col__lock-opened active" src="../images/match/LockOpened.svg"
+                        <img class="row__player-lock-opened" src="../images/match/LockOpened.svg"
                              alt="lock-opened">
-                        <img class="creator-col__lock-closed" src="../images/match/LockClosed.svg" alt="lock-closed">
                     </div>
                     <div class="row__col">
                         <p>5v5</p>
                     </div>
                     <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
+                        <img class="row__country-image" src="../images/playerPage/Country.svg" alt="country">
                     </div>
                     <div class="row__col">
-                        <img class="connection-col__good-image active" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image" src="../images/match/ConnectionMiddle.svg"
+                        <img class="row__connection-middle-image" src="../images/match/ConnectionMiddle.svg"
                              alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
                         <p>18</p>
                     </div>
                     <div class="row__col">
@@ -282,84 +272,34 @@
                         </svg>
                     </button>
                 </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
+                <div class="body__row table__template-columns">
+                    <div class="row__col">
+                        <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                         <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
+                            <p class="row__col-title">Dust II</p>
+                            <span class="row__col-subtitle">#81931232</span>
                         </div>
                     </div>
                     <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
+                        <span class="row__player-image-wrapper">
+                            <img class="row__player-image" src="../images/profileMenu/ProfileAvatar.png"
                                  alt="ProfileAvatar">
                         </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col creator-col--vip">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
+                        <img class="row__player-vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
                         <p>VuDrinKid</p>
-                        <img class="creator-col__lock-opened active" src="../images/match/LockOpened.svg"
+                        <img class="row__player-lock-opened" src="../images/match/LockOpened.svg"
                              alt="lock-opened">
-                        <img class="creator-col__lock-closed" src="../images/match/LockClosed.svg" alt="lock-closed">
                     </div>
                     <div class="row__col">
                         <p>5v5</p>
                     </div>
                     <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
+                        <img class="row__country-image" src="../images/playerPage/Country.svg" alt="country">
                     </div>
                     <div class="row__col">
-                        <img class="connection-col__good-image active" src="../images/match/ConnectionGood.svg"
+                        <img class="row__connection-good-image" src="../images/match/ConnectionGood.svg"
                              alt="ConnectionGood">
-                        <img class="connection-col__middle-image" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>18</p>
+                        <p>1</p>
                     </div>
                     <div class="row__col">
                         только что
@@ -372,312 +312,37 @@
                         </svg>
                     </button>
                 </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
+                <div class="body__row table__template-columns">
+                    <div class="row__col">
+                        <img class="row__map-image" src="../images/playerPage/Map1.png" alt="Map1">
                         <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
+                            <p class="row__col-title">Dust II</p>
+                            <span class="row__col-subtitle">#81931232</span>
                         </div>
                     </div>
-                    <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
+                    <div class="row__col row__player--vip">
+                        <span class="row__player-image-wrapper">
+                            <img class="row__player-image" src="../images/profileMenu/ProfileAvatar.png"
                                  alt="ProfileAvatar">
                         </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col creator-col--vip">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
+                        <img class="row__player-vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
                         <p>VuDrinKid</p>
-                        <img class="creator-col__lock-opened active" src="../images/match/LockOpened.svg"
+                        <img class="row__player-lock-opened" src="../images/match/LockOpened.svg"
                              alt="lock-opened">
-                        <img class="creator-col__lock-closed" src="../images/match/LockClosed.svg" alt="lock-closed">
                     </div>
                     <div class="row__col">
                         <p>5v5</p>
                     </div>
                     <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
+                        <img class="row__country-image" src="../images/playerPage/Country.svg" alt="country">
                     </div>
                     <div class="row__col">
-                        <img class="connection-col__good-image active" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image" src="../images/match/ConnectionMiddle.svg"
+                        <img class="row__connection-bad-image" src="../images/match/ConnectionBad.svg"
                              alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>18</p>
+                        <p>999</p>
                     </div>
                     <div class="row__col">
                         только что
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col creator-col--vip">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>VuDrinKid</p>
-                        <img class="creator-col__lock-opened active" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image active" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>18</p>
-                    </div>
-                    <div class="row__col">
-                        только что
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
-                    </div>
-                    <button class="row__col row__action-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
-                             fill="none">
-                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="body__row">
-                    <div class="row__col row__map-col">
-                        <img class="map-col__image" src="../images/playerPage/Map1.png" alt="Map1">
-                        <div>
-                            <p class="map-col__title">Dust II</p>
-                            <span class="map-col__id">#81931232</span>
-                        </div>
-                    </div>
-                    <div class="row__col">
-                        <span class="creator-col__image-wrapper">
-                            <img class="creator-col__image" src="../images/profileMenu/ProfileAvatar.png"
-                                 alt="ProfileAvatar">
-                        </span>
-                        <img class="creator-col__vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
-                        <p>Striker_Stall</p>
-                        <img class="creator-col__lock-opened" src="../images/match/LockOpened.svg"
-                             alt="lock-opened">
-                        <img class="creator-col__lock-closed active" src="../images/match/LockClosed.svg" alt="lock-closed">
-                    </div>
-                    <div class="row__col">
-                        <p>5v5</p>
-                    </div>
-                    <div class="row__col">
-                        <img class="row__col-country" src="../images/playerPage/Country.svg" alt="country">
-                    </div>
-                    <div class="row__col">
-                        <img class="connection-col__good-image" src="../images/match/ConnectionGood.svg"
-                             alt="ConnectionGood">
-                        <img class="connection-col__middle-image active" src="../images/match/ConnectionMiddle.svg"
-                             alt="ConnectionMiddle">
-                        <img class="connection-col__bad-image" src="../images/match/ConnectionBad.svg"
-                             alt="ConnectionBad">
-                        <p>65</p>
-                    </div>
-                    <div class="row__col">
-                        1 мин. назад
                     </div>
                     <button class="row__col row__action-col">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
@@ -688,7 +353,6 @@
                     </button>
                 </div>
             </div>
-
             <div class="table__pagination-wrapper">
                 <div class="table__pagination">
 
@@ -739,7 +403,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </main>

@@ -142,99 +142,6 @@
 }
 
 .table--tournaments-teams {
-  .table__header, .body__row {
-    grid-template-columns: 1.2fr .8fr 1fr .8fr .8fr 1fr 1fr .3fr;
-  }
-
-  .row__col {
-    display: flex;
-    align-items: center;
-  }
-
-  .team-col__image-wrapper {
-    position: relative;
-    display: block;
-    margin-right: 15px;
-  }
-
-  .team-col__image {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .ranked--green {
-    .ranked__icon {
-      background: #22B21F;
-      transform: rotate(270deg);
-    }
-
-    .ranked__text {
-      color: #22B21F;
-    }
-  }
-
-  .ranked--red {
-    .ranked__icon {
-      background: #FF0000;
-      transform: rotate(90deg);
-    }
-
-    .ranked__text {
-      color: #FF0000;
-    }
-  }
-
-  .ranked__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 12px;
-    width: 12px;
-    margin: 0 5px 0 8px;
-    border-radius: 100%;
-  }
-
-  .win-rate__icon {
-    position: relative;
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
-
-    svg {
-      width: 29px;
-      height: 29px;
-    }
-  }
-
-  .win-rate__icon-progress {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-
-    circle {
-      stroke: #E89930;
-      stroke-linecap: round;
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .win-rate__icon-background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 5;
-
-    circle {
-      stroke: #651BC3;
-      stroke-linecap: round;
-      stroke-dasharray: 125 150;
-      stroke-dashoffset: 0;
-    }
-  }
 
   .row__col-currency {
     width: 12px;
@@ -647,39 +554,6 @@
   height: 100%;
 }
 
-.table--tournaments-match {
-  width: 100%;
-  height: 100%;
-  max-height: 485px;
-  display: block;
-
-  .table__header, .body__row {
-    grid-template-columns: 4fr 1fr 1fr .3fr;
-  }
-
-  .header__col, .row__col {
-    &:last-child {
-      margin-left: auto;
-    }
-  }
-
-  .row__col {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-
-    &.row__col-teams-score {
-      gap: 15px;
-
-      .teams-score__score {
-        font-size: 20px;
-        font-weight: 700;
-        padding: 0 35px;
-      }
-    }
-  }
-}
-
 .chat__wrapper {
   display: flex;
   margin: 42px 0 47px;
@@ -757,6 +631,7 @@
 
   &.active {
     cursor: default;
+
     .chat__list-item-nickname {
       font-weight: 700;
     }

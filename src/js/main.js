@@ -7,9 +7,11 @@ import '../styles/player.scss'
 import '../styles/tabs.scss'
 import '../styles/table.scss'
 import '../styles/chat.scss'
-import '../styles/match.scss'
-import '../styles/matchEdit.scss'
+import '../styles/editTeam.scss'
+import '../styles/editMatch.scss'
 import '../styles/tournament.scss'
+import '../styles/team.scss'
+import '../styles/match.scss'
 
 import SimpleScrollbar from 'simple-scrollbar'
 import 'simple-scrollbar/simple-scrollbar.css'
@@ -41,19 +43,19 @@ headerMenuCloseButton.addEventListener('click', handleHeaderMenuToggle);
 
 // Tabs
 const addCustomScroll = (element) => {
-    const scrollBorder = document.createElement('span');
-    scrollBorder.classList.add('custom-scroll-border')
-    SimpleScrollbar.initEl(element)
-    element.appendChild(scrollBorder)
+    if (element.scrollHeight > element.offsetHeight) {
+        element.style.height = `${element.offsetHeight}px`;
+        const scrollBorder = document.createElement('span');
+        scrollBorder.classList.add('custom-scroll-border')
+        SimpleScrollbar.initEl(element)
+        element.appendChild(scrollBorder)
+    }
 }
 
 const initCustomScroll = () => {
     const allScrollWrappers = document.querySelectorAll('.custom-scroll-wrapper');
     for (let i = 0; i < allScrollWrappers.length; i++) {
-        console.log(allScrollWrappers[i], allScrollWrappers[i].scrollHeight, allScrollWrappers[i].offsetHeight)
-        if (allScrollWrappers[i].scrollHeight > allScrollWrappers[i].offsetHeight) {
-            addCustomScroll(allScrollWrappers[i]);
-        }
+        addCustomScroll(allScrollWrappers[i]);
     }
 }
 initCustomScroll();
@@ -72,12 +74,10 @@ const handleOpenTab = (navigationElements, contentElements, navigationElement, c
     const customScrollElements = contentElement.querySelectorAll('.custom-scroll-wrapper--tab');
     if (customScrollElements.length) {
         for (let i = 0; i < customScrollElements.length; i++) {
-            if (customScrollElements[i].scrollHeight > customScrollElements[i].offsetHeight) {
-                addCustomScroll(customScrollElements[i])
-            }
+            addCustomScroll(customScrollElements[i])
         }
     } else {
-        if (contentElement.scrollHeight > contentElement.offsetHeight) {
+        if (!contentElement.classList.contains('table--with-pagination')) {
             addCustomScroll(contentElement)
         }
     }

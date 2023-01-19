@@ -1,0 +1,141 @@
+.profile__container--team {
+  .about-list__item-key {
+    min-width: unset;
+  }
+
+  .about-list__item-image {
+    margin-left: 0;
+  }
+
+  .info-center__block-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .info-center__block {
+    display: flex;
+    align-items: center;
+  }
+
+  .info-center__currency-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+  }
+
+  .info-center__currency {
+    margin-left: 10px;
+  }
+
+  .profile__settings {
+    margin-top: 0;
+  }
+}
+
+.page__filters.page__filters--teams {
+  justify-content: space-between;
+}
+
+.filters__dropdown_wrapper.filters__dropdown_wrapper--teams {
+  gap: 43px;
+
+  .filters__dropdown-reset {
+    margin-left: 0;
+  }
+
+  .dropdown__content {
+    top: calc(100% + 15px);
+    &:after {
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.filters__view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tiles__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+
+.tile {
+  width: calc(100% / 4 - 21px * 3 / 4);
+  background: rgba(23, 0, 48, 0.9);
+  border: 2px solid rgba(112, 30, 217, 0.7);
+}
+
+.tile__image {
+  width: 100%;
+  height: 220px;
+}
+
+.tile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 29px 20px 27px;
+  font: 400 16px/1 "gilroy";
+  color: #fff;
+  cursor: pointer;
+}
+
+.tile__content-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .ranked, .prize {
+    display: flex;
+    align-items: center;
+  }
+
+  .ranked--green {
+    .ranked-icon {
+      background: #22B21F;
+      transform: rotate(270deg);
+    }
+
+    .ranked-text {
+      color: #22B21F;
+    }
+  }
+
+  .ranked--red {
+    .ranked-icon {
+      background: #FF0000;
+      transform: rotate(90deg);
+    }
+
+    .ranked-text {
+      color: #FF0000;
+    }
+  }
+
+  .ranked-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 12px;
+    width: 12px;
+    margin: 0 5px 0 8px;
+    border-radius: 100%;
+  }
+
+  .titles {
+    width: 14px;
+    height: 16px;
+  }
+
+  .prize-image {
+    margin-left: 5px;
+  }
+}
+

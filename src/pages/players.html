@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="../images/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+<script type="module" src="../js/main.js"></script>
+<div class="container">
+    <a class="banner" href="#">
+        <img class="banner" src="../images/Banner.png" alt="Banner">
+    </a>
+</div>
+<header class="header">
+    <div class="container header__container">
+        <div class="header__left">
+            <a href="#">
+                <img class="header__logo" src="../images/header/Logo+Near.png" alt="logo">
+            </a>
+            <nav>
+                <ul class="header__navigation">
+                    <li class="navigation__item"><a href="#">CS:GO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__right">
+            <div class="header__lang-switcher">
+                <span class="lang-switcher__option active">RU</span>
+                <span class="lang-switcher__splitter">/</span>
+                <span class="lang-switcher__option">ENG</span>
+            </div>
+
+            <a href="#" class="header__notifications active">
+                <img class="notifications__image" src="../images/header/Bell.svg" alt="notifications">
+                <div class="notifications__active ellipse-icon green">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4.5" cy="4.5" r="4" fill="currentColor" stroke="white"/>
+                    </svg>
+                </div>
+            </a>
+
+            <div class="header__profile-wrapper">
+                <img class="header__profile-open" src="../images/header/Burger.svg" alt="profile-open">
+                <img class="header__profile-close" src="../images/header/Close.svg" alt="profile-close">
+                <div class="header__profile profile--vip">
+                    <div class="header__profile-border"></div>
+                    <div class="header__profile-background">
+                        <div class="profile__top">
+                            <div class="profile__avatar-wrapper">
+                                <img class="profile__avatar" src="../images/profileMenu/ProfileAvatar.png" alt="avatar">
+                                <div class="profile__avatar-online ellipse-icon green">
+                                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.5" cy="4.5" r="4" fill="currentColor" stroke="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="profile__info">
+                                <div class="profile__info-nickname">
+                                    <img class="info-nickname__vip-icon" src="../images/profileMenu/Vip.png" alt="Vip">
+                                    <p class="info-nickname__text">POzeSS</p>
+                                </div>
+                                <div class="profile__info-rating">
+                                    <img class="info-rating__icon" src="../images/profileMenu/Rating.svg" alt="Rating">
+                                    <p class="info-rating__text">1000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="profile__play-button">
+                        <span class="profile__button-text">
+                            <img class="profile__add-icon" src="../images/Add.svg" alt="Add">
+                            Играть
+                        </span>
+                        </button>
+                        <button class="profile__vip-button">
+                        <span class="profile__button-text">
+                            <img class="profile__add-icon" src="../images/Add.svg" alt="Add">
+                            Премиум
+                        </span>
+                            <span class="profile__vip-button-icon">
+                            <svg width="49" height="35" viewBox="0 0 49 35" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.5882 21.8543L21.719 5.93255L16.4458 26.2576L0.303955 11.3711L12.1184 43.3835L48.8287 34.0607L43.937 0.290106L36.5882 21.8543Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </span>
+                        </button>
+                        <div class="profile__currency-wrapper">
+                            <div class="profile__currency">
+                                Баланс
+                                <img class="profile__currency-icon" src="../images/profileMenu/Currency.svg"
+                                     alt="Currency">
+                                <span class="profile__currency-value">0</span>
+                            </div>
+                            <button>
+                                <img class="profile__currency-add" src="../images/Add.svg" alt="Add">
+                            </button>
+                        </div>
+                        <div class="profile__divider"></div>
+
+                        <div class="profile__menu-item">
+                            <div class="profile__menu-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_14586)">
+                                        <path d="M14.6305 0H1.37376C0.613899 0 0 0.628653 0 1.40678V12.6434C0 13.4215 0.613899 14.0502 1.37376 14.0502H5.12155L8.00215 17.0044L10.8827 14.0502H14.6305C15.3861 14.0502 16.0043 13.4215 16.0043 12.6434V1.40678C16 0.628653 15.3861 0 14.6305 0ZM8.58599 11.3861C8.54736 11.4784 8.49155 11.5619 8.42286 11.6323C8.35417 11.7026 8.26831 11.7598 8.16957 11.7993C8.07083 11.8389 7.95922 11.8609 7.83901 11.8609C7.7231 11.8609 7.61578 11.8389 7.51704 11.7993C7.4183 11.7554 7.33244 11.7026 7.26375 11.6279C7.19506 11.5575 7.13925 11.474 7.10062 11.3817C7.06198 11.2894 7.04051 11.1883 7.04051 11.0871C7.04051 10.9816 7.05769 10.8761 7.09632 10.7838C7.13496 10.6871 7.18648 10.6036 7.25946 10.5332C7.33244 10.4629 7.41401 10.4057 7.51274 10.3618C7.61148 10.3178 7.71881 10.3002 7.83901 10.3002C7.95922 10.3002 8.06654 10.3222 8.16957 10.3618C8.26831 10.4057 8.35417 10.4585 8.42286 10.5332C8.49155 10.6036 8.54736 10.6871 8.58599 10.7838C8.62463 10.8805 8.6461 10.9816 8.6461 11.0871C8.6461 11.1927 8.62463 11.2938 8.58599 11.3861ZM10.3976 6.61184C10.3161 6.80528 10.213 6.97673 10.0885 7.1262C9.95975 7.27567 9.81808 7.41634 9.66354 7.53944C9.50469 7.66253 9.35015 7.78562 9.19131 7.90872C9.06681 8.00543 8.95948 8.09775 8.86504 8.18568C8.77059 8.278 8.68903 8.36592 8.62034 8.45824C8.55165 8.55056 8.50443 8.64727 8.47008 8.74399C8.43574 8.8451 8.41857 8.95061 8.41857 9.06931V9.34626H7.19506V9.06051C7.19506 8.8451 7.21653 8.65167 7.26375 8.47143C7.30668 8.29118 7.37108 8.12852 7.44835 7.97905C7.52562 7.82958 7.62007 7.68891 7.72739 7.56142C7.83472 7.42953 7.95492 7.30644 8.07942 7.18774C8.2125 7.06025 8.34559 6.95035 8.47008 6.84924C8.59458 6.74813 8.71049 6.65141 8.81352 6.55909C8.91226 6.46677 8.99812 6.37006 9.05822 6.27334C9.11833 6.17662 9.15267 6.06672 9.15267 5.94802C9.15267 5.62271 9.05393 5.37212 8.86075 5.18748C8.66756 5.00724 8.37993 4.91932 7.99785 4.91932C7.62436 4.91932 7.34102 5.01164 7.14355 5.20067C6.95036 5.38971 6.85162 5.66227 6.85162 6.02715H5.49074C5.49074 5.67106 5.54226 5.35014 5.64958 5.06879C5.75691 4.78743 5.91575 4.54564 6.12611 4.34342C6.33646 4.1412 6.60263 3.98733 6.9246 3.88182C7.24229 3.77631 7.61578 3.71916 8.04508 3.71916C8.40139 3.71916 8.72766 3.77192 9.03247 3.87742C9.33727 3.98293 9.59485 4.1324 9.81808 4.32583C10.037 4.51927 10.213 4.75226 10.3375 5.02483C10.462 5.29739 10.5264 5.60073 10.5264 5.93923C10.5178 6.19421 10.4749 6.41841 10.3976 6.61184Z"
+                                              fill="currentColor"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_14586">
+                                            <rect width="16" height="17" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span class="profile__menu-text">Техническая поддержка</span>
+                        </div>
+                        <div class="profile__menu-item">
+                            <div class="profile__menu-icon">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_14627)">
+                                        <path d="M8.00214 16.9995C7.46981 16.9995 6.9289 16.9477 6.39656 16.844C6.3107 16.8268 6.23772 16.7706 6.20338 16.6886L5.38771 14.7493C4.80386 14.5031 4.26295 14.1748 3.76925 13.7775L1.68715 13.9762C1.60129 13.9848 1.51543 13.9502 1.45962 13.8811C0.828548 13.1037 0.339147 12.2269 0.012879 11.2767C-0.012879 11.1903 0 11.0996 0.051516 11.0305L1.31366 9.3504C1.27931 9.06534 1.26214 8.78028 1.26214 8.50385C1.26214 8.15833 1.2879 7.80848 1.34371 7.45863L0.12879 5.73531C0.0772739 5.66188 0.0686879 5.57118 0.0987389 5.48912C0.450765 4.55187 0.965924 3.69237 1.62275 2.92789C1.67856 2.8631 1.76871 2.82855 1.85457 2.83719L3.93238 3.09633C4.43896 2.70761 4.99275 2.39664 5.5766 2.17205L6.44808 0.258681C6.48672 0.176618 6.5597 0.12047 6.64556 0.107513C7.63724 -0.0522942 8.62892 -0.0393369 9.60773 0.150704C9.69359 0.16798 9.76657 0.224129 9.80091 0.306192L10.6166 2.24547C11.2004 2.49166 11.7413 2.81991 12.235 3.21727L14.3171 3.02291C14.403 3.01427 14.4889 3.04882 14.5447 3.11793C15.1757 3.89537 15.6651 4.77215 15.9914 5.72235C16.0215 5.80441 16.0043 5.89943 15.9528 5.96854L14.6906 7.64867C14.725 7.93373 14.7422 8.21879 14.7422 8.49522C14.7422 8.84074 14.7164 9.19059 14.6606 9.54044L15.8712 11.2594C15.9227 11.3329 15.9313 11.4236 15.9013 11.5056C15.5492 12.4429 15.0341 13.3024 14.3772 14.0669C14.3214 14.1316 14.2313 14.1662 14.1454 14.1576L12.0676 13.8984C11.561 14.2871 11.0072 14.5981 10.4234 14.8227L9.55192 16.7361C9.51328 16.8181 9.4403 16.8743 9.35444 16.8872C8.90797 16.965 8.44862 16.9995 8.00214 16.9995ZM8.00214 4.71168C5.92434 4.71168 4.23719 6.41341 4.23719 8.49953C4.23719 10.5857 5.92863 12.2874 8.00214 12.2874C10.08 12.2874 11.7671 10.5857 11.7671 8.49953C11.7671 6.41341 10.0757 4.71168 8.00214 4.71168Z"
+                                              fill="currentColor"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_14627">
+                                            <rect width="16" height="17" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span class="profile__menu-text">Настройки</span>
+                        </div>
+                        <div class="profile__menu-item">
+                            <div class="profile__menu-icon">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.539 0L1.46101 1.21173e-05C0.653801 1.21173e-05 0 0.720173 0 1.60931V8.19536L10.0464 8.19535L7.48963 5.37908C7.18282 5.04112 7.18282 4.49396 7.48963 4.15601C7.79644 3.81806 8.29318 3.81806 8.59999 4.15601L12.4424 8.38846C12.7493 8.72641 12.7493 9.27357 12.4424 9.61153L8.59999 13.844C8.44659 14.013 8.2457 14.0974 8.04481 14.0974C7.84392 14.0974 7.64304 14.013 7.48963 13.844C7.18282 13.506 7.18282 12.9589 7.48963 12.6209L10.0464 9.80464L0 9.80466V16.3907C0 17.2798 0.653801 18 1.46101 18L14.539 18C15.3462 18 16 17.2798 16 16.3907V1.6093C16 0.72016 15.3462 0 14.539 0Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span class="profile__menu-text">Выход</span>
+                        </div>
+
+                        <div class="profile__divider"></div>
+
+                        <div class="profile__menu-item">
+                            <div class="profile__menu-icon">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.05472 7.69107C6.61316 7.69107 7.87653 6.06533 7.87653 4.05989C7.87653 2.05445 6.61316 0.428711 5.05472 0.428711C3.49628 0.428711 2.23291 2.05445 2.23291 4.05989C2.23291 6.06533 3.49628 7.69107 5.05472 7.69107Z"
+                                          fill="currentColor"/>
+                                    <path d="M5.0547 14.8798C7.10058 14.8798 8.92596 14.4034 10.1094 13.6613C9.26927 10.9494 7.32387 9.0498 5.0547 9.0498C2.78553 9.0498 0.840123 10.9494 0 13.6613C1.18622 14.4034 3.00881 14.8798 5.0547 14.8798Z"
+                                          fill="currentColor"/>
+                                    <path d="M12.0619 8.08761C13.2766 8.08761 14.2613 6.82148 14.2613 5.25962C14.2613 3.69777 13.2766 2.43164 12.0619 2.43164C10.8473 2.43164 9.86255 3.69777 9.86255 5.25962C9.86255 6.82148 10.8473 8.08761 12.0619 8.08761Z"
+                                          fill="currentColor"/>
+                                    <path d="M12.0618 9.14746C11.1128 9.14746 10.2392 9.57502 9.53027 10.2988C10.2197 11.1295 10.7779 12.1678 11.1491 13.3681L11.2384 13.6551C11.5064 13.6765 11.7799 13.6918 12.0618 13.6918C13.6555 13.6918 15.079 13.3192 16.0001 12.742C15.3442 10.6256 13.8286 9.14746 12.0618 9.14746Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span class="profile__menu-text">Друзья</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__gradient-wrapper">
+            <div class="header__gradient-type-one"></div>
+            <div class="header__gradient-type-two"></div>
+            <div class="header__gradient-type-tree"></div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container container--page-with-table">
+        <div class="page__filters page__filters--players">
+            <div class="filters__dropdown_wrapper filters__dropdown_wrapper--teams">
+                <div class="filters__dropdown dropdown">
+                    <div class="dropdown__header">
+                        <p>Рейтинг</p>
+                        <span class="dropdown__header-icon">
+                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    </div>
+                    <div class="dropdown__content">
+                    <span class="dropdown__content-item active">
+                        Планируются
+                    </span>
+                        <span class="dropdown__content-item">
+                        Текущие
+                    </span>
+                        <span class="dropdown__content-item">
+                        Прошедшие
+                    </span>
+                    </div>
+                </div>
+                <div class="filters__dropdown dropdown">
+                    <div class="dropdown__header">
+                        <p>Страна</p>
+                        <span class="dropdown__header-icon">
+                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    </div>
+                    <div class="dropdown__content">
+                    <span class="dropdown__content-item active">
+                        Планируются
+                    </span>
+                        <span class="dropdown__content-item">
+                        Текущие
+                    </span>
+                        <span class="dropdown__content-item">
+                        Прошедшие
+                    </span>
+                    </div>
+                </div>
+                <div class="filters__dropdown dropdown">
+                    <div class="dropdown__header">
+                        <p>% побед</p>
+                        <span class="dropdown__header-icon">
+                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    </div>
+                    <div class="dropdown__content">
+                    <span class="dropdown__content-item active">
+                        Планируются
+                    </span>
+                        <span class="dropdown__content-item">
+                        Текущие
+                    </span>
+                        <span class="dropdown__content-item">
+                        Прошедшие
+                    </span>
+                    </div>
+                </div>
+                <div class="filters__dropdown dropdown">
+                    <div class="dropdown__header">
+                        <p>Призовые</p>
+                        <span class="dropdown__header-icon">
+                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    </div>
+                    <div class="dropdown__content">
+                    <span class="dropdown__content-item active">
+                        Планируются
+                    </span>
+                        <span class="dropdown__content-item">
+                        Текущие
+                    </span>
+                        <span class="dropdown__content-item">
+                        Прошедшие
+                    </span>
+                    </div>
+                </div>
+                <div class="filters__dropdown-reset">
+                    Сбросить
+                </div>
+            </div>
+            <div class="mode-selector-wrapper">
+                <span class="mode-selector__icon">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_14046)">
+                    <path d="M9.99999 9.99565L9.95937 9.85124L9.44043 7.72198L4.40573 3.39437L4.38567 3.37711L4.35944 3.37367C4.16384 3.34793 3.95447 3.23605 3.78498 3.06673C3.67039 2.95225 3.58245 2.81972 3.52939 2.68551L4.15946 2.05603L3.68972 1.58673L2.94461 2.33114C2.67217 2.05895 1.5694 0.95722 1.52965 0.917507C1.48502 0.872914 1.47852 0.841756 1.46868 0.794574C1.4658 0.780733 1.46273 0.76605 1.45855 0.750588C1.4643 0.556884 1.39339 0.361323 1.2454 0.213478C0.960495 -0.0711683 0.498567 -0.0711502 0.213681 0.213478C-0.0712316 0.498115 -0.0712226 0.959601 0.213681 1.24424C0.361665 1.39209 0.557418 1.46294 0.751305 1.45719C0.766781 1.46135 0.781469 1.46442 0.795314 1.46731C0.842531 1.47715 0.873728 1.48364 0.918362 1.52822C0.958112 1.56793 2.06088 2.66967 2.33332 2.94186L1.58821 3.68627L2.05795 4.15557L2.67863 3.53547C2.81296 3.58849 2.94563 3.67634 3.0602 3.79082C3.22969 3.96014 3.34167 4.16934 3.36743 4.36474L3.37088 4.39095L7.70124 9.41938L7.71981 9.44097L9.85108 9.95941L9.99562 9.99999L9.99422 9.99423L9.99999 9.99565Z"
+                          fill="currentColor"/>
+                    <path d="M0.559569 7.72176L0.0406203 9.85102L0 9.99543L0.0057809 9.99403L0.00436739 9.99979L0.148917 9.95921L2.28017 9.44077L2.29875 9.41917L4.64141 6.69888L3.41133 5.27051L0.559569 7.72176Z"
+                          fill="currentColor"/>
+                    <path d="M6.62932 4.39095L6.63277 4.36474C6.65853 4.16933 6.77051 3.96014 6.94 3.79081C7.05587 3.67504 7.19023 3.58648 7.32612 3.53367L7.9486 4.15556L8.41834 3.68627L7.67005 2.93868C7.94758 2.66141 9.04223 1.56778 9.08184 1.52822C9.12647 1.48363 9.15767 1.47714 9.20488 1.46731C9.21873 1.46442 9.23342 1.46136 9.24889 1.45718C9.44278 1.46293 9.63853 1.39208 9.78652 1.24423C10.0714 0.959588 10.0714 0.498111 9.78652 0.213474C9.50163 -0.0711536 9.0397 -0.0711627 8.7548 0.213474C8.60681 0.361319 8.53589 0.55688 8.54165 0.750585C8.53747 0.766038 8.5344 0.78073 8.53152 0.794571C8.52167 0.841743 8.51517 0.872911 8.47055 0.917504C8.43095 0.957063 7.33629 2.0507 7.05876 2.32796L6.31682 1.58673L5.84708 2.05602L6.47259 2.68095C6.41973 2.81671 6.33109 2.95094 6.21521 3.06672C6.04572 3.23605 5.83634 3.34793 5.64075 3.37367L5.61452 3.37711L5.59446 3.39437L5.41699 3.54691L6.53133 4.50475L6.62932 4.39095Z"
+                          fill="currentColor"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_14046">
+                    <rect width="10" height="10" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+                <span class="mode-selector__title">
+                    Режим
+                </span>
+
+                <div class="filters__options">
+                    <div class="filters__option-wrapper">
+                        <span class="filters__option active">5v5</span>
+                        <span class="filters__option">3v3</span>
+                        <span class="filters__option">1v1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__wrapper table--players">
+            <div class="table__header table__template-columns">
+                <div class="header__col header__col-main">
+                    Ник
+                </div>
+                <div class="header__col header__col-centred">
+                    Страна
+                </div>
+                <div class="header__col header__col-centred">
+                    Топ
+                </div>
+                <div class="header__col header__col-centred">
+                    Рейтинг
+                </div>
+                <div class="header__col header__col-centred">
+                    % побед
+                </div>
+                <div class="header__col header__col-centred">
+                    % поражений
+                </div>
+                <div class="header__col header__col-centred">
+                    Призовые
+                </div>
+            </div>
+            <div class="table__body custom-scroll-wrapper--tab">
+                <div class="body__row table__template-columns">
+                    <div class="row__col">
+                        <span class="row__player-image-wrapper">
+                            <img class="row__player-image" src="../images/profileMenu/ProfileAvatar.png" alt="ProfileAvatar">
+                        </span>
+                        <img class="row__player-vip-image" src="../images/profileMenu/Vip.png" alt="Vip">
+                        <p>VuDrinKid</p>
+                    </div>
+                    <div class="row__col row__col-centred">
+                        <img src="../images/playerPage/Country.svg" alt="country">
+                    </div>
+                    <div class="row__col row__col-centred">
+                        <p>8</p>
+                    </div>
+                    <div class="row__col row__ranked--green row__col-centred">
+                        <p>1745</p>
+                        <span class="row__ranked-icon">
+                            <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.35355 4.35355C4.54882 4.15829 4.54882 3.84171 4.35355 3.64645L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.29289 4L0.464466 6.82843C0.269204 7.02369 0.269204 7.34027 0.464466 7.53553C0.659728 7.7308 0.976311 7.7308 1.17157 7.53553L4.35355 4.35355ZM3 4.5H4V3.5H3V4.5Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="row__ranked-text">
+                            12
+                        </span>
+                    </div>
+                    <div class="row__col row__win-rate row__col-centred">
+                        <div class="win-rate__icon">
+                            <div class="win-rate__icon-progress">
+                                <svg viewBox="0 0 50 50">
+                                    <circle style="stroke-dasharray: calc(123 / 100 * 84) 150" cx="25" cy="25" r="20" fill="none" stroke-width="2.5"></circle>
+                                </svg>
+                            </div>
+                            <div class="win-rate__icon-background">
+                                <svg viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="win-rate__percent">
+                            84%
+                        </span>
+                    </div>
+                    <div class="row__col row__win-rate row__col-centred">
+                        <div class="win-rate__icon">
+                            <div class="win-rate__icon-progress">
+                                <svg viewBox="0 0 50 50">
+                                    <circle style="stroke-dasharray: calc(123 / 100 * 84) 150" cx="25" cy="25" r="20" fill="none" stroke-width="2.5"></circle>
+                                </svg>
+                            </div>
+                            <div class="win-rate__icon-background">
+                                <svg viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="win-rate__percent">
+                            84%
+                        </span>
+                    </div>
+                    <div class="row__col row__col-centred">
+                        <p>1 290</p>
+                        <img class="row__prize-image" src="../images/profileMenu/Currency.svg" alt="Currency">
+                    </div>
+                    <button class="row__col row__action-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16"
+                             fill="none">
+                            <path d="M8.72401 8.42097C9.11454 8.03045 9.11454 7.39728 8.72401 7.00676L2.36005 0.642799C1.96953 0.252275 1.33636 0.252275 0.94584 0.642799C0.555316 1.03332 0.555316 1.66649 0.94584 2.05701L6.60269 7.71387L0.94584 13.3707C0.555316 13.7612 0.555316 14.3944 0.94584 14.7849C1.33636 15.1755 1.96953 15.1755 2.36005 14.7849L8.72401 8.42097ZM7 8.71387H8.01691V6.71387H7V8.71387Z"
+                                  fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer__gradient"></div>
+    <div class="footer__container-wrapper">
+        <div class="container footer__container">
+            <div class="footer__list">
+                <div class="footer__list-item">
+                    <div class="list-item__title">На сайте</div>
+                    <div class="list-item__statistic-wrapper">
+                        <div class="list-item__statistic">
+                            <p class="statistic__value">632 830</p>
+                            <p class="statistic__description">матчей</p>
+                        </div>
+                        <div class="list-item__statistic">
+                            <p class="statistic__value">15</p>
+                            <p class="statistic__description">игроков в поиске</p>
+                        </div>
+                        <div class="list-item__statistic">
+                            <p class="statistic__value">153</p>
+                            <p class="statistic__description">онлайн</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__list-item">
+                    <div class="list-item__title">Партнеры</div>
+                    <div class="list-item__partners-wrapper">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="list-item__partners" src="../images/footer/GeometryDash.png" alt="GeometryDash">
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="list-item__partners" src="../images/footer/RocketLeague.png" alt="RocketLeague">
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="list-item__partners" src="../images/footer/RiotGames.png" alt="RiotGames">
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img class="list-item__partners" src="../images/footer/ClashRoyalRed.png" alt="ClashRoyalRed">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__list-item">
+                    <div class="list-item__title">Инфо</div>
+                    <div class="list-item__info">
+                        <a href="#" class="list-item__info-link">Политика конфиденциальности</a>
+                        <a href="#" class="list-item__info-link">Правила сервиса</a>
+                        <a href="#" class="list-item__info-link">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
