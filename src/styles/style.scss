@@ -156,3 +156,26 @@ body {
   margin-bottom: 44px;
 }
 
+main {
+  position: relative;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+    width: 100%;
+    background: url(/src/images/MainBackground.gif);
+    background-size: 100% auto;
+    max-width: 1300px;
+    opacity: 0.1;
+  }
+  &:after {
+    background: url(/src/images/MainBackground.png);
+    background-size: 100% auto;
+    opacity: 0.2;
+  }
+}

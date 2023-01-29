@@ -12,6 +12,7 @@ import '../styles/editMatch.scss'
 import '../styles/tournament.scss'
 import '../styles/team.scss'
 import '../styles/match.scss'
+import '../styles/modal.scss'
 
 import SimpleScrollbar from 'simple-scrollbar'
 import 'simple-scrollbar/simple-scrollbar.css'
