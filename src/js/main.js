@@ -72,14 +72,24 @@ const handleOpenTab = (navigationElements, contentElements, navigationElement, c
     navigationElement.classList.add('active')
     contentElement.classList.add('active')
 
+    const navigationItemTriangleElement = navigationElement.querySelector('.tab__navigation-item-triangle');
+    if (!navigationItemTriangleElement) {
+        const navigationItemTriangle = document.createElement('span');
+        navigationItemTriangle.classList.add('tab__navigation-item-triangle')
+        navigationElement.appendChild(navigationItemTriangle)
+    }
+
+    const withoutScroll = contentElement.classList.contains('tab__content-item--no-scroll');
     const customScrollElements = contentElement.querySelectorAll('.custom-scroll-wrapper--tab');
-    if (customScrollElements.length) {
-        for (let i = 0; i < customScrollElements.length; i++) {
-            addCustomScroll(customScrollElements[i])
-        }
-    } else {
-        if (!contentElement.classList.contains('table--with-pagination')) {
-            addCustomScroll(contentElement)
+    if (!withoutScroll) {
+        if (customScrollElements.length) {
+            for (let i = 0; i < customScrollElements.length; i++) {
+                addCustomScroll(customScrollElements[i])
+            }
+        } else {
+            if (!contentElement.classList.contains('table--with-pagination')) {
+                addCustomScroll(contentElement)
+            }
         }
     }
 }

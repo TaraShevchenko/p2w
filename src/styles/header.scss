@@ -26,8 +26,7 @@
 }
 
 .header__gradient-type-one,
-.header__gradient-type-two,
-.header__gradient-type-tree {
+.header__gradient-type-two{
   position: absolute;
   height: 42px;
   width: 50%;
@@ -229,6 +228,7 @@
 }
 
 .profile__avatar {
+  position: relative;
   display: block;
   height: 47px;
   width: 47px;

@@ -46,10 +46,6 @@
 
   .dropdown__content {
     top: calc(100% + 15px);
-    &:after {
-      left: 0;
-      top: 0;
-    }
   }
 }
 

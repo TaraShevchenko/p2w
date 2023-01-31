@@ -36,37 +36,31 @@
   color: #AAA5A5;
   font: 400 16px/1 'gilroy';
   margin-bottom: 18px;
+  height: 25px;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    p {
+      color: #fff;
+      font-weight: 600;
+      transition: all .3s ease;
+    }
+    .profile__id-image {
+      color: #632EDC;
+      transition: all .3s ease;
+    }
+  }
+}
+
+.profile__id {
+  margin-bottom: 65px;
 }
 
 .profile__steam-image, .profile__id-image {
   margin-right: 15px;
-}
-
-.profile__steam-arrow {
-  position: relative;
-  color: #fff;
-  margin-left: 13px;
-  cursor: pointer;
-}
-
-.steam__tooltip {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.steam__tooltip-item {
-  display: flex;
-  gap: 8px;
-  font: 400 12px/1 'gilroy';
-}
-
-.steam__tooltip-item-key {
-  font-weight: 700;
-}
-
-.steam__tooltip-item-copy {
-  cursor: pointer;
+  color: #AAA5A5;
+  transition: all .3s ease;
 }
 
 .profile__about-list {

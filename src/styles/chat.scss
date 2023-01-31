@@ -5,6 +5,10 @@
     height: calc(100% + 18px);
     margin-top: -18px;
     padding-top: 18px;
+
+    &.chat__messages-wrapper--profile {
+      width: calc(100% + 28px);
+    }
   }
 }
 
@@ -103,6 +107,11 @@
 
 .message__likes-icon {
   margin-right: 10px;
+  color: #9A9A9A;
+
+  &.active {
+    color: #632EDC;
+  }
 }
 
 .message__likes-count {

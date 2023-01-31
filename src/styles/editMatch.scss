@@ -64,7 +64,7 @@
     width: 2px;
     height: 18px;
     background: #8223FA;
-    left: 20px;
+    left: 16px;
     bottom: 12px;
   }
 }
@@ -114,10 +114,10 @@
 }
 
 .form-field__input {
-  padding-left: 33px;
+  padding-left: 28px;
 
   border: 2px solid #8223FA;
-  background: transparent;
+  background: rgba(22, 0, 48, 0.6);
 
   height: 100%;
   width: 100%;
@@ -173,14 +173,17 @@
   .dropdown__header-icon {
     transform: rotate(0);
   }
+  .dropdown__content-item {
+    font-size: 16px;
+  }
 }
 
 .form-field__dropdown-header {
+  background: rgba(22, 0, 48, 0.6);
   border: 2px solid #8223FA;
-  background: transparent;
   height: 40px;
   width: 100%;
-  padding: 11px 17px;
+  padding: 11px 14px 11px 17px;
 
   display: flex;
   align-items: center;
@@ -320,12 +323,12 @@
   &:after {
     position: absolute;
     left: 3px;
-    top: -2px;
+    top: -2.5px;
   }
 
   &:before {
     position: absolute;
-    width: 189px;
+    width: 188px;
     height: 99px;
     border: 2px solid #8223FA;
     left: -172px;

@@ -1,12 +1,8 @@
 .modal__wrapper {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 99;
+  right: 10px;
+  top: 10px;
 }
 
 .modal {
@@ -98,6 +94,19 @@
 .modal__title {
   color: #fff;
   font: 400 14px/1 'gilroy';
+
+  &.modal__title--with-divider {
+    margin-bottom: 18px;
+  }
+}
+
+.modal__section-title {
+  color: #fff;
+  font: 400 12px/1 'gilroy';
+
+  &.modal__section-title--add-player {
+    margin-top: 9px;
+  }
 }
 
 .modal__link {
@@ -259,3 +268,184 @@
   height: 16px;
 }
 
+.modal__main-players {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 12px 0 17px;
+}
+
+.main-player {
+  display: flex;
+  align-items: center;
+}
+
+.main-player__avatar {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.main-player__nickname {
+  color: #fff;
+  font: 700 14px/1 'gilroy';
+  margin-right: 44px;
+}
+
+.main-player__add-text {
+  color: #fff;
+  font: 400 14px/1 'gilroy';
+}
+
+.main-player__add-icon {
+  margin-left: auto;
+}
+
+.main-player__add-button {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  color: #632EDC;
+  font: 400 14px/1 'gilroy';
+  margin: 17px 0 22px;
+
+}
+
+.modal__add-players-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.add-players-footer__notification {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: #fff;
+  font: 400 12px/1 'gilroy';
+}
+
+.modal__report-form {
+
+  .form-field__top {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 14px 0 27px;
+
+    .form-field {
+      flex: 1 1 0;
+    }
+  }
+
+  .form-field__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 20px 0 22px;
+  }
+
+  .form-field.form-field--required .form-field__title {
+    position: relative;
+    width: fit-content;
+
+    &:before{
+      content: '*';
+      position: absolute;
+      right: -5px;
+      top: 0;
+      color: #632EDC;
+      font: 400 12px/1 'gilroy';
+    }
+  }
+
+  .form-field__title {
+    color: #fff;
+    font: 400 12px/1 'gilroy';
+  }
+
+  .form-field__dropdown {
+    margin-top: 13px;
+  }
+
+  .form-field__dropdown-header {
+    height: 27px;
+    padding: 7px 8px;
+  }
+
+  .form-field__dropdown-content {
+    top: 27px;
+  }
+
+  .dropdown__header-text {
+    font: 400 12px/1 'gilroy';
+  }
+
+  .form-field-textarea {
+    .form-field__title {
+      margin-bottom: 19px;
+    }
+
+    .form-field__input-wrapper {
+      height: unset;
+
+      &:before {
+        height: 12px;
+        top: 6px;
+        left: 5px;
+      }
+
+      .form-field__input {
+        padding-top: 4px;
+        padding-left: 9px;
+        display: block;
+        font: 400 12px/1 'gilroy';
+        height: 126px;
+      }
+    }
+  }
+
+  .form-field__upload {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: 400 12px/1 'gilroy';
+    color: #fff;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.modal__report-footer {
+  margin-top: 21px;
+}
+
+.modal__report-footer-info {
+  color: #fff;
+  font: 400 12px/1 'gilroy';
+  margin-bottom: 22px;
+}
+
+.modal__report-footer-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__report-footer-notification {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8424FE;
+  font: 400 12px/1 'gilroy';
+  span {
+    height: 5px;
+  }
+}

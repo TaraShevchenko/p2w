@@ -337,6 +337,14 @@
   padding-top: 72px;
   color: #fff;
   transition: all .5s ease;
+
+  &:last-child {
+    .table-column__item {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
 }
 
 .table-column__title {
@@ -369,7 +377,7 @@
   flex-grow: 1;
 
   position: relative;
-  padding: 50px 0;
+  padding: 37px 0;
 
   &:first-child {
     padding-top: 20px;
