@@ -384,12 +384,12 @@
 
     &:before {
       content: "";
-      margin: -15px 0 0;
+      margin: -9px 0 0;
     }
 
     &:after {
       content: "";
-      margin: -15px 0 0;
+      margin: -9px 0 0;
     }
 
     &:nth-child(2n):after {
@@ -409,11 +409,11 @@
 
     &:nth-child(2n):after {
       top: 20px;
-      bottom: calc(50% - 25px);
+      bottom: calc(50% - 18px);
     }
 
     &:nth-child(2n):before {
-      top: calc(50% + 25px);
+      top: calc(50% + 18px);
       bottom: 50%;
       margin: 0;
     }

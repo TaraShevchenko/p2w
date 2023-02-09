@@ -1,8 +1,9 @@
 .modal__wrapper {
-  position: fixed;
+  position: sticky;
   z-index: 99;
-  right: 10px;
-  top: 10px;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
 }
 
 .modal {
@@ -88,6 +89,10 @@
 
   &.modal__button-group--centred {
     justify-content: center;
+  }
+
+  &.modal__button-group--system {
+    justify-content: flex-end;
   }
 }
 
@@ -184,6 +189,22 @@
   color: #fff;
   font: 700 14px/1 'gilroy';
   margin-bottom: 5px;
+}
+
+.modal__system {
+  gap: 10px;
+  display: flex;
+  margin-bottom: 20px;
+
+  .modal__image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .modal__title {
+    margin-top: 10px;
+    width: calc(100% - 45px);
+  }
 }
 
 .modal__team {
