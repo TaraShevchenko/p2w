@@ -1,0 +1,101 @@
+.container.container__team-edit {
+  padding-top: 41px;
+  padding-bottom: 91px;
+}
+
+.team-edit__form-top {
+  display: flex;
+  margin-bottom: 75px;
+}
+
+.team-edit__form-field--author {
+  margin-right: 78px;
+
+  .form-field__input-upload-wrapper {
+    margin-top: 31px;
+  }
+}
+
+.team-edit__form-field--name {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 335px;
+  margin-bottom: 24px;
+}
+
+.team-edit__form-field--country {
+  max-width: 244px;
+}
+
+.team-edit__form-field--description {
+  .form-field__title {
+    padding: 51px 0 67px;
+  }
+
+  .form-field__input-wrapper {
+    margin-top: 31px;
+    height: 250px;
+
+    &:before {
+      top: 15px;
+      bottom: unset;
+    }
+  }
+
+  .form-field__input {
+    padding-top: 12px;
+    font: 400 16px/22px "gilroy"
+  }
+}
+
+.team-edit__form-players-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 53px;
+  padding: 46px 0 70px;
+}
+
+.team-edit__form-field--player {
+  width: fit-content;
+
+  .form-field__title {
+    align-items: center;
+  }
+
+  .form-field__text {
+    text-align: center;
+    margin-top: 15px;
+    font: 400 16px/19px "gilroy";
+
+    &.form-field__text--small-width {
+      max-width: 75px;
+    }
+  }
+
+  .form-field__button {
+    margin-top: 15px;
+    font: 400 16px/19px "gilroy";
+    color: #8424FE;
+  }
+}
+
+.team-edit__form-bottom {
+  display: flex;
+  padding-top: 55px;
+
+  @media screen and (max-width: 1150px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-bottom__button-group {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: auto;
+  }
+}
+
+

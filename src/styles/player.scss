@@ -36,37 +36,35 @@
   color: #AAA5A5;
   font: 400 16px/1 'gilroy';
   margin-bottom: 18px;
+  height: 25px;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    p {
+      color: #fff;
+      font-weight: 600;
+      transition: all .3s ease;
+    }
+    .profile__id-image {
+      color: #632EDC;
+      transition: all .3s ease;
+    }
+  }
+}
+
+.profile__steam {
+  margin-left: -1px;
+}
+
+.profile__id {
+  margin-bottom: 65px;
 }
 
 .profile__steam-image, .profile__id-image {
   margin-right: 15px;
-}
-
-.profile__steam-arrow {
-  position: relative;
-  color: #fff;
-  margin-left: 13px;
-  cursor: pointer;
-}
-
-.steam__tooltip {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.steam__tooltip-item {
-  display: flex;
-  gap: 8px;
-  font: 400 12px/1 'gilroy';
-}
-
-.steam__tooltip-item-key {
-  font-weight: 700;
-}
-
-.steam__tooltip-item-copy {
-  cursor: pointer;
+  color: #AAA5A5;
+  transition: all .3s ease;
 }
 
 .profile__about-list {
@@ -486,71 +484,6 @@
   height: 642px;
 }
 
-.table--maps, .table--tournaments {
-  .table__header, .body__row {
-    grid-template-columns: 3fr 1fr 1fr 1fr 2fr .5fr;
-  }
-
-  .row__col {
-    display: flex;
-    align-items: center;
-
-    &.row__map-col {
-      display: flex;
-      align-items: center;
-    }
-
-    .map-col__image {
-      width: 105px;
-      height: 48px;
-
-      margin-right: 30px;
-    }
-
-    .tournament-col__image {
-      width: 45px;
-      height: 45px;
-
-      margin-right: 17px;
-    }
-
-    .map-col__title {
-      display: block;
-    }
-
-    .map-col__id {
-      display: block;
-      color: #AAA5A5;
-      margin-top: 5px;
-    }
-
-    &.row__result-col {
-      color: #10AA1B;
-
-      &.negative {
-        color: #F12619;
-      }
-    }
-
-    &.row__prize-fund-col {
-      font-weight: 600;
-      img {
-        margin-left: 5px;
-      }
-    }
-
-    &.row__action-col {
-      cursor: pointer;
-    }
-  }
-}
-
-.table--tournaments {
-  .table__header, .body__row {
-    grid-template-columns: 3fr 1fr 1.5fr 1fr 1fr .5fr;
-  }
-}
-
 .stream__video-wrapper {
   position: relative;
   &:after {
@@ -693,4 +626,8 @@
 .stream__share-icon {
   width: 14px;
   height: 14px;
+}
+
+.page__filters.page__filters--players {
+  justify-content: space-between;
 }
