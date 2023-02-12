@@ -196,11 +196,13 @@
 
 .tournaments-bracket {
   padding: 43px 0 95px;
-  overflow: hidden;
 }
 
 .tournaments-bracket__header {
-  position: relative;
+  top: 10px;
+  z-index: 5;
+  position: sticky;
+  background: rgba(22, 0, 48, 0.6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -247,9 +249,6 @@
   align-items: center;
   justify-content: space-between;
   min-width: 215px;
-}
-
-.header-filter__info {
 }
 
 .header-filter__value {
@@ -320,10 +319,15 @@
   transform: rotate(-90deg);
 }
 
+.tournaments-bracket__table-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .tournaments-bracket__table {
+  gap: 76px;
   display: flex;
   justify-content: space-between;
-  gap: 76px;
 
   transition: all .5s ease;
 }

@@ -52,7 +52,17 @@
 .filters__view-switcher {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
+}
+
+.filters__view-switcher-button {
+  color: #fff;
+  transition: all .3s ease;
+
+  &:hover {
+    color: #8223FA;
+    transition: all .3s ease;
+  }
 }
 
 .tiles__wrapper {

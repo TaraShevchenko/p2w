@@ -15,28 +15,6 @@
   justify-content: space-between;
 }
 
-.header__gradient-wrapper {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.header__gradient-type-one,
-.header__gradient-type-two {
-  position: absolute;
-  height: 42px;
-  width: 50%;
-  top: -28px;
-  left: 0;
-  background: radial-gradient(50% 50% at 50% 50%, #C819EC 0%, rgba(52, 2, 110, 0) 78.12%);
-  transform: rotate(180deg);
-  opacity: .7;
-}
-
 .header__gradient-type-two {
   right: 0;
   left: unset;
@@ -51,6 +29,30 @@
 .header__left, .header__right {
   display: flex;
   align-items: center
+}
+
+.header__logo_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    background: radial-gradient(35.36% 35.36% at 50% 50%, #D192FF 0%, rgba(209, 146, 255, 0.78) 12%, rgba(209, 146, 255, 0.57) 24%, rgba(209, 146, 255, 0.4) 37%, rgba(209, 146, 255, 0.25) 50%, rgba(209, 146, 255, 0.14) 62%, rgba(209, 146, 255, 0.06) 75%, rgba(209, 146, 255, 0.02) 88%, rgba(209, 146, 255, 0) 100%);
+  }
+}
+
+.header__logo {
+  width: 75px;
+  height: auto;
+  margin-top: -6px;
+  z-index: 2;
+  position: relative;
 }
 
 .header__navigation {
@@ -180,6 +182,16 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  .profile__avatar-wrapper {
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+      box-shadow: 0 0 15px #701ed9cc;
+      transition: all .3s ease;
+      border-radius: 50%;
+    }
+  }
 
   &.active {
     .header__profile-open {

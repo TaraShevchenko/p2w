@@ -233,7 +233,7 @@
 
 .form-field__select-map-item-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 33px;
 
@@ -302,18 +302,17 @@
 
 .select-map-item__name {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   color: #fff;
-  font: 400 16px/1 'gilroy';
+  font: 400 16px/20px 'gilroy';
 }
 
 .select-map-item__name-text {
+  margin-top: 1px;
   width: 165px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .select-map-item__checkbox {
