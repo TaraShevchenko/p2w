@@ -46,6 +46,7 @@
       font-weight: 600;
       transition: all .3s ease;
     }
+
     .profile__id-image {
       color: #632EDC;
       transition: all .3s ease;
@@ -225,6 +226,7 @@
 
   &:last-child {
     margin-right: 0;
+
     &:after {
       content: '';
     }
@@ -306,7 +308,7 @@
   height: calc(100% - 40px);
   left: 4px;
   top: 18px;
-  box-shadow: 0 0 50px rgb(112 30 217 / 80%);
+  box-shadow: 0 0 50px rgba(112, 30, 217, 0.8);
   z-index: 1;
   opacity: 0;
   transition: all .3s ease;
@@ -486,6 +488,7 @@
 
 .stream__video-wrapper {
   position: relative;
+
   &:after {
     z-index: -1;
     content: '';
@@ -542,6 +545,7 @@
       opacity: 1;
     }
   }
+
   &.vip {
     &:after {
       opacity: 1;

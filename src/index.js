@@ -1,21 +1,36 @@
-import '../fonts/fonts.css'
-import '../styles/reset.scss'
-import '../styles/style.scss'
-import '../styles/header.scss'
-import '../styles/footer.scss'
-import '../styles/player.scss'
-import '../styles/tabs.scss'
-import '../styles/table.scss'
-import '../styles/chat.scss'
-import '../styles/editTeam.scss'
-import '../styles/editMatch.scss'
-import '../styles/tournament.scss'
-import '../styles/team.scss'
-import '../styles/match.scss'
-import '../styles/modal.scss'
+import './fonts/fonts.scss'
+import './styles/reset.scss'
+import './styles/style.scss'
+import './styles/header.scss'
+import './styles/footer.scss'
+import './styles/player.scss'
+import './styles/tabs.scss'
+import './styles/table.scss'
+import './styles/chat.scss'
+import './styles/editTeam.scss'
+import './styles/editMatch.scss'
+import './styles/tournament.scss'
+import './styles/team.scss'
+import './styles/match.scss'
+import './styles/modal.scss'
 
-import SimpleScrollbar from 'simple-scrollbar'
 import 'simple-scrollbar/simple-scrollbar.css'
+import SimpleScrollbar from 'simple-scrollbar'
+import lottie from 'lottie-web';
+
+const mainElement = document.querySelector('.main')
+const AnimationContainer = document.createElement('div');
+AnimationContainer.setAttribute('class', 'container')
+AnimationContainer.setAttribute('id', 'animationContainer')
+mainElement.appendChild(AnimationContainer)
+
+lottie.loadAnimation({
+    container: AnimationContainer,
+    path: './images/animation/Background.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+})
 
 // Header menu
 const headerMenu = document.querySelector('.header__profile-wrapper');
