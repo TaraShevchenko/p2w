@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  min-width: 992px;
+  min-width: 100%;
   overflow: auto;
 }
 
@@ -38,6 +38,7 @@ body {
   &.green {
     color: #22B21F;
   }
+
   &.red {
     color: #F12619;
   }
@@ -88,6 +89,7 @@ body {
     min-height: 85px;
     background-image: url('../images/TooltipBackgroundTreeLines.png');
   }
+
   &.nier__tooltip {
     min-height: 40px;
     background-image: url('../images/TooltipBackgroundTwoLines.png');
@@ -135,6 +137,7 @@ body {
 .custom-scroll-wrapper, .custom-scroll-wrapper--tab {
   position: relative;
 }
+
 .ss-container .ss-scroll {
   position: absolute;
   right: 0 !important;
@@ -144,6 +147,7 @@ body {
   border-right: 6px solid #701ED9;
   opacity: 1;
 }
+
 .custom-scroll-border {
   z-index: 10;
   position: absolute;
@@ -158,6 +162,7 @@ body {
   .ss-container .ss-scroll {
     right: 9px !important;
   }
+
   .custom-scroll-border {
     right: 18px;
   }
@@ -192,16 +197,25 @@ body {
 }
 
 body {
-  position: relative;
+  //position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: url(/src/images/MainBackgroundStatic.png);
-    background-size: 100% auto;
-  }
+  //&:before {
+  //  content: "";
+  //  position: absolute;
+  //  z-index: -10;
+  //  top: 0;
+  //  height: 100%;
+  //  width: 100%;
+  //  background: url(/src/images/MainBackgroundStatic.png);
+  //  background-size: 100% auto;
+  //}
 }
+
+#animationContainer {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -100px;
+  z-index: -1;
+}
+
