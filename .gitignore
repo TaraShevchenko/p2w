@@ -1,9 +1,9 @@
 # Node Modules
 /node_modules
+/dist
 
 # Loacl Files
 package-lock.json
-yarn.lock
 
 # Logs
 logs
