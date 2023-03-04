@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: auto;
+}
+
 body {
   height: 100%;
   min-height: 100vh;
@@ -9,8 +13,10 @@ body {
   display: flex;
   flex-direction: column;
 
-  min-width: 100%;
-  overflow: auto;
+  width: 100%;
+  @media screen and (max-width: 992px){
+    overflow: auto;
+  }
 }
 
 .main {
@@ -148,6 +154,11 @@ body {
   opacity: 1;
 }
 
+.ss-wrapper .ss-content {
+  width: calc(100% + 19px);
+}
+
+
 .custom-scroll-border {
   z-index: 10;
   position: absolute;
@@ -196,7 +207,7 @@ body {
   margin-bottom: 44px;
 }
 
-body {
+//body {
   //position: relative;
 
   //&:before {
@@ -209,13 +220,30 @@ body {
   //  background: url(/src/images/MainBackgroundStatic.png);
   //  background-size: 100% auto;
   //}
+//}
+
+.container--animations {
+  z-index: -1;
+  position: absolute;
+  top: 220px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
-#animationContainer {
-  position: fixed;
-  transform: translateX(-50%);
+.container.container--animation {
+  position: absolute;
   left: 50%;
-  top: -100px;
-  z-index: -1;
+  transform: translateX(-50%);
+
+  .container__animation {
+    width: 600px;
+    height: 600px;
+  }
+  &:nth-child(2n) {
+    .container__animation {
+      margin-left: auto;
+    }
+  }
 }
 

@@ -18,19 +18,48 @@ import 'simple-scrollbar/simple-scrollbar.css'
 import SimpleScrollbar from 'simple-scrollbar'
 import lottie from 'lottie-web';
 
-const mainElement = document.querySelector('.main')
-const AnimationContainer = document.createElement('div');
-AnimationContainer.setAttribute('class', 'container')
-AnimationContainer.setAttribute('id', 'animationContainer')
-mainElement.appendChild(AnimationContainer)
+const generateAnimations = () => {
+    const oldAnimationsContainer = document.querySelector('.container--animations')
+    if (oldAnimationsContainer) {
+        oldAnimationsContainer.remove();
+    }
 
-lottie.loadAnimation({
-    container: AnimationContainer,
-    path: './images/animation/Background.json',
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-})
+    const body = document.body,
+        html = document.documentElement;
+    const height = Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    const headerHeight = 220;
+    const footerHeight = 200;
+    const animationHeight = 600;
+    const contentHeight = height - headerHeight - footerHeight
+
+    const AnimationsContainer = document.createElement('div')
+    AnimationsContainer.setAttribute('class', 'container--animations')
+    AnimationsContainer.style.height = height - headerHeight + 'px';
+    const bodyElement = document.querySelector('body')
+    bodyElement.appendChild(AnimationsContainer)
+
+    const animationsCount = contentHeight < animationHeight ? 1 : Math.ceil(contentHeight / animationHeight)
+
+    for (let i = 0; i < animationsCount; i++) {
+        const Animation = document.createElement('div')
+        Animation.setAttribute('class', 'container__animation')
+        const AnimationContainer = document.createElement('div')
+        AnimationContainer.style.top = `${i * 600}px`
+        AnimationContainer.setAttribute('class', 'container container--animation')
+        AnimationContainer.appendChild(Animation)
+        AnimationsContainer.appendChild(AnimationContainer)
+
+
+        lottie.loadAnimation({
+            container: Animation,
+            path: './images/animation/Background.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+        })
+    }
+}
 
 // Header menu
 const headerMenu = document.querySelector('.header__profile-wrapper');
@@ -107,6 +136,7 @@ const handleOpenTab = (navigationElements, contentElements, navigationElement, c
             }
         }
     }
+    generateAnimations();
 }
 
 const handleInitTab = () => {
@@ -204,6 +234,7 @@ if (tournamentsBracketTable) {
         tournamentsBracketTable.style.transform = `translate3d(-${tableColumnItemWidth * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationPrev.disabled = false;
         tournamentsBracketNavigationNext.disabled = (childrenCount - carouselShift) <= 4;
+        setTimeout(() => generateAnimations(), 550);
     }
     const scrollPrevTournamentsBracketTable = () => {
         carouselShift -= 1;
@@ -212,8 +243,11 @@ if (tournamentsBracketTable) {
         tournamentsBracketTable.style.transform = `translate3d(-${tableColumnItemWidth * carouselShift}px, 0px, 0px)`;
         tournamentsBracketNavigationNext.disabled = false;
         tournamentsBracketNavigationPrev.disabled = carouselShift === 0;
+        setTimeout(() => generateAnimations(), 550);
     }
 
     tournamentsBracketNavigationNext.addEventListener('click', scrollNextTournamentsBracketTable)
     tournamentsBracketNavigationPrev.addEventListener('click', scrollPrevTournamentsBracketTable)
 }
+
+generateAnimations();

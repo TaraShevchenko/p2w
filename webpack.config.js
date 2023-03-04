@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 function generateHTMLWebpackPluginArrayForAllPages() {
     const folderPath = path.join(__dirname, './src/pages');
     const files = fs.readdirSync(folderPath);
-    return files.map(file => new HtmlWebpackPlugin({
+    return files.map(file => new HtmlPlugin({
         template: `./src/pages/${file}`,
         filename: file,
         chunks: ['main'],
@@ -26,7 +27,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|json)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name]-[hash][ext]'
@@ -74,6 +75,11 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: './assets/style.css'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "./src/images/animation", to: "images/animation" },
+            ],
         }),
         ...customHTMLWebpackPluginArray
     ],
