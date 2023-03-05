@@ -11,7 +11,7 @@ function generateHTMLWebpackPluginArrayForAllPages() {
     return files.map(file => new HtmlPlugin({
         template: `./src/pages/${file}`,
         filename: file,
-        chunks: ['main'],
+        chunks: file === 'main.html' ? ['main'] : ['global'],
         inject: true
     }));
 }
@@ -19,10 +19,13 @@ function generateHTMLWebpackPluginArrayForAllPages() {
 const customHTMLWebpackPluginArray = generateHTMLWebpackPluginArrayForAllPages();
 
 module.exports = {
-    entry: {main: './src/index.js'},
+    entry: {
+        global: './src/index.js',
+        main: './src/main.js',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'assets/[name].js',
+        filename: 'assets/[name]-[hash].js',
     },
     module: {
         rules: [
@@ -74,7 +77,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: './assets/style.css'
+            filename: './assets/[name]-[hash].css'
         }),
         new CopyPlugin({
             patterns: [
