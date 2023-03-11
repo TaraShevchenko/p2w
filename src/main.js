@@ -12,11 +12,12 @@ import anime from 'animejs';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 
-const generateAndSubscribeForAnimationElements = (className, callback, threshold) => {
+const windowWidth = window.innerWidth
+const generateAndSubscribeForAnimationElements = (className, callback, threshold, isWrapper) => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                callback(entry.target)
+                callback(isWrapper ? entry.target.children : entry.target)
                 observer.unobserve(entry.target);
             }
         });
@@ -27,6 +28,8 @@ const generateAndSubscribeForAnimationElements = (className, callback, threshold
 }
 
 const comingFromTopAnimationClassName = 'coming-from-top__animation'
+const comingFromTopAnimationCSingleClassName = 'coming-from-top__animation-single'
+const comingFromTopAnimationGroupClassName = 'coming-from-top__animation-wrapper'
 const comingFromTopAnimation = (element) => {
     anime({
         targets: element,
@@ -39,31 +42,20 @@ const comingFromTopAnimation = (element) => {
             {value: '-30%', duration: 0},
             {value: 0, duration: 2000},
         ],
-        easing: 'spring(1, 80, 5, 0)'
-    });
-}
-
-generateAndSubscribeForAnimationElements(comingFromTopAnimationClassName, comingFromTopAnimation)
-
-const windowWidth = window.innerWidth
-const comingFromLeftAnimationGroupClassName = 'coming-from-left__animation-wrapper'
-const comingFromLeftAnimationClassName = 'coming-from-left__animation'
-const comingFromLeftAnimationGroupElements = document.querySelectorAll('.coming-from-left__animation')
-const comingFromLeftAnimationGroup = () => {
-    anime({
-        targets: comingFromLeftAnimationGroupElements,
-        opacity: [
-            {value: 0, duration: 0},
-            {value: 0.5, duration: 400},
-            {value: 1, duration: 1600},
-        ],
-        translateX: [
-            {value: '-30%', duration: 0},
-            {value: 0, duration: 2000},
-        ],
         delay: anime.stagger(200),
     });
 }
+
+generateAndSubscribeForAnimationElements(comingFromTopAnimationCSingleClassName, comingFromTopAnimation, 1)
+
+if (windowWidth > 875) {
+    generateAndSubscribeForAnimationElements(comingFromTopAnimationGroupClassName, comingFromTopAnimation, 0.5, true)
+} else {
+    generateAndSubscribeForAnimationElements(comingFromTopAnimationClassName, comingFromTopAnimation, 1)
+}
+
+const comingFromLeftAnimationGroupClassName = 'coming-from-left__animation-wrapper'
+const comingFromLeftAnimationClassName = 'coming-from-left__animation'
 
 const comingFromLeftAnimation = (element) => {
     anime({
@@ -77,33 +69,18 @@ const comingFromLeftAnimation = (element) => {
             {value: '-30%', duration: 0},
             {value: 0, duration: 2000},
         ],
+        delay: anime.stagger(200),
     });
 }
 
 if (windowWidth > 875) {
-    generateAndSubscribeForAnimationElements(comingFromLeftAnimationGroupClassName, comingFromLeftAnimationGroup, 0.5)
+    generateAndSubscribeForAnimationElements(comingFromLeftAnimationGroupClassName, comingFromLeftAnimation, 0.5, true)
 } else {
     generateAndSubscribeForAnimationElements(comingFromLeftAnimationClassName, comingFromLeftAnimation, 1)
 }
 
 const comingFromRightAnimationGroupClassName = 'coming-from-right__animation-wrapper'
 const comingFromRightAnimationClassName = 'coming-from-right__animation'
-const comingFromRightAnimationGroupElements = document.querySelectorAll('.coming-from-right__animation')
-const comingFromRightAnimationGroup = () => {
-    anime({
-        targets: comingFromRightAnimationGroupElements,
-        opacity: [
-            {value: 0, duration: 0},
-            {value: 0.5, duration: 400},
-            {value: 1, duration: 1600},
-        ],
-        translateX: [
-            {value: '30%', duration: 0},
-            {value: 0, duration: 2000},
-        ],
-        delay: anime.stagger(200),
-    });
-}
 
 const comingFromRightAnimation = (element) => {
     anime({
@@ -117,11 +94,12 @@ const comingFromRightAnimation = (element) => {
             {value: '30%', duration: 0},
             {value: 0, duration: 2000},
         ],
+        delay: anime.stagger(200),
     });
 }
 
 if (windowWidth > 875) {
-    generateAndSubscribeForAnimationElements(comingFromRightAnimationGroupClassName, comingFromRightAnimationGroup, 0.5)
+    generateAndSubscribeForAnimationElements(comingFromRightAnimationGroupClassName, comingFromRightAnimation, 0.5, true)
 } else {
     generateAndSubscribeForAnimationElements(comingFromRightAnimationClassName, comingFromRightAnimation, 1)
 }
